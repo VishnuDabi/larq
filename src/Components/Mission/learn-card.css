@@ -1,0 +1,55 @@
+.learn-card-container {
+    position: relative;
+    height: 60%;
+    width: 100%;
+    /* background-color: aqua; */
+    /* margin: auto; */
+    top: 25%;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+}
+
+.learn-card {
+    width: 400px;
+    height: 100%;
+    margin: 0px 15px;
+    border-radius: 15px;
+    /* border: 2px solid rgb(184, 34, 47); */
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.img-cr {
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.learn-card-text {
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    text-align: center;
+    /* transform: translateY(32px); */
+    color: white;
+    width: 80%;
+    margin: 0 auto;
+    transition: all 0.4s ease-in-out;
+}
+
+.learn-card-container:hover .learn-card-text {
+    transform: translateY(-30px);
+    transition: all 0.4s ease-in-out;
+}
+
+.shop-now-btn {
+    transform: translateY(45px);
+    transition: all 0.4s ease-in-out;
+
+}
+
+.learn-card-container:hover .shop-now-btn {
+    transform: translateY(10px);
+    transition: all 0.4s ease-in-out;
+}

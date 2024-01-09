@@ -1,0 +1,85 @@
+.hovered-container-main {
+    position: absolute;
+    top: 62px;
+    left: 0;
+    width: 100%;
+    padding: 0px 100px;
+    padding-right: 100px;
+    background: #fff;
+    height: 55vh;
+    z-index: 2;
+    display: none;
+    gap: 20px;
+    color: #153a5b;
+
+}
+
+.hovered-cards {
+    /* flex: 1 1 0px; */
+    width: 25%;
+    height: 90%;
+    overflow: hidden;
+    margin: 25px 0px;
+    display: flex;
+    border-radius: 25px;
+    flex-direction: column;
+    position: relative;
+
+}
+
+.hovered-cards:nth-child(2) {
+    background-color: rgba(241, 241, 241, 0.871);
+}
+
+.hovered-cards:nth-of-type(3n) {
+    background-color: #e8e8e8;
+}
+
+.hovered-cards>button,
+span {
+    max-width: fit-content;
+    margin: 10px 0px;
+}
+
+.hovered-cards>span {
+    padding-top: 50px;
+    font: 100;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.container-first {
+    height: 90%;
+}
+
+.container-active {
+    height: 100%;
+}
+
+.hovered-card-text {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    color: white;
+    text-transform: capitalize;
+    width: 100%;
+    color: #153a5b;
+}
+
+.hovered-card-text>h5 {
+
+    font-size: 20px !important;
+    padding: 5px;
+}
+
+.hovered-card-text>p {
+
+    font-size: 17px !important;
+}
+
+
+
+
+.menu-link:hover .hovered-container-main {
+    display: flex;
+}

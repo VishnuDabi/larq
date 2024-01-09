@@ -1,0 +1,25 @@
+.economical-container {
+
+    margin: 100px;
+}
+
+.eco-wrapper {
+    display: flex;
+    background-image: linear-gradient(to right, #FCE9EB, rgb(255, 255, 255));
+    padding: 0px 100px;
+    border-radius: 25px;
+}
+
+.eco-card {
+    padding: 80px 20px;
+    text-align: center;
+    color: #153a5b;
+}
+
+.eco-card>h3 {
+    padding: 20px 0px;
+}
+
+.eco-card>p {
+    font-weight: 400;
+}

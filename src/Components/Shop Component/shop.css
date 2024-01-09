@@ -1,0 +1,15 @@
+.shop-conatiner {
+    padding: 2rem 10rem;
+}
+
+
+.shop-wrapper {
+    display: flex;
+    padding-top: 10px;
+    gap: 20px;
+}
+
+.shop-childs {
+    flex-grow: 1;
+    flex-basis: 0;
+}

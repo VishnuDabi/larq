@@ -1,0 +1,72 @@
+.header-container {
+    width: 100%;
+    background-color: white;
+    height: 100px;
+    padding: 0px 10rem;
+    position: relative;
+}
+
+.header-wrapper {
+    display: flex;
+    height: 100%;
+    align-items: center;
+
+}
+
+/* header links conatiner */
+
+.header-item {
+    flex: 1 2 0px;
+
+}
+
+.header-links>ul {
+    text-transform: uppercase;
+    list-style: none;
+    display: flex;
+}
+
+.menu-link>* {
+    padding: 0rem 2rem 0 0;
+    font-size: 16px;
+    font-weight: 700;
+
+}
+
+.menu-link>span {
+    cursor: pointer;
+}
+
+
+.menu-link:hover .hovered-container-main {
+    display: flex;
+}
+
+/* hovered conatiner inside header links */
+
+
+/* header logo container */
+.cmp-logo {
+    height: 35px;
+    width: 90px;
+    margin: auto;
+}
+
+/* header icons container */
+
+.icons-container {
+    flex: 1 0 0px;
+}
+
+.login-icons {
+    align-items: end;
+    text-align: end;
+
+}
+
+.login-icons>p>* {
+    padding: 0rem 2rem;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+}

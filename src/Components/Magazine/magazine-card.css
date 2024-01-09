@@ -1,0 +1,11 @@
+.mg-img {
+    height: 80%;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.mg-card {
+    height: 100%;
+    width: 400px;
+    padding: 0px 3rem 0rem 0rem;
+}

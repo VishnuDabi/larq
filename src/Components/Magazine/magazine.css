@@ -1,0 +1,48 @@
+.magazine-wrapper {
+    display: flex;
+    padding: 5rem 10rem;
+    justify-content: space-between;
+
+}
+
+.magazine-text>p {
+    font: 300 !important;
+}
+
+.mg-card-btn {
+    border: none;
+    border: none;
+    text-decoration: underline;
+    background: none;
+}
+
+.magazine-scoll-container {
+    display: flex;
+    padding: 0rem 10rem;
+    overflow-x: scroll;
+    height: 700px;
+
+}
+
+#style-4::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
+    border-radius: 10px;
+
+
+}
+
+#style-4::-webkit-scrollbar {
+    height: 5px;
+    background-color: #F5F5F5;
+}
+
+#style-4::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-image: -webkit-gradient(linear,
+            left bottom,
+            left top,
+            color-stop(0.44, rgb(122, 153, 217)),
+            color-stop(0.72, rgb(73, 125, 189)),
+            color-stop(0.86, rgb(28, 58, 148)));
+}
