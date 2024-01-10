@@ -4,7 +4,9 @@
     height: 100px;
     padding: 0px 10rem;
     position: relative;
+    z-index: 1;
 }
+
 
 .header-wrapper {
     display: flex;
@@ -13,7 +15,10 @@
 
 }
 
-/* header links conatiner */
+/* header links container */
+.hamburger-menu-container {
+    display: none;
+}
 
 .header-item {
     flex: 1 2 0px;
@@ -42,7 +47,7 @@
     display: flex;
 }
 
-/* hovered conatiner inside header links */
+/* hovered container inside header links */
 
 
 /* header logo container */
@@ -69,4 +74,24 @@
     font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
+}
+
+@media screen and (max-width:1200px) {
+    .header-container {
+        padding: 0 20px;
+    }
+
+    .hamburger-menu-container {
+        display: block;
+    }
+
+    .header-links {
+        display: none;
+
+    }
+
+    .login-icons>p>span:nth-last-child(n + 3) {
+        display: none;
+    }
+
 }

@@ -28,6 +28,7 @@
     justify-content: space-between;
     flex-direction: column;
     width: 25%;
+    padding-bottom: 40px;
 }
 
 @media screen and (max-width:1500px) {
@@ -43,6 +44,7 @@
 
     .review-slider-box {
         overflow-x: scroll;
+
     }
 
     .review-items {

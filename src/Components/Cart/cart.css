@@ -1,0 +1,102 @@
+.cart-container {
+    padding: 50px 10%;
+
+}
+
+.cart-wrapper {
+    display: flex;
+    gap: 50px;
+}
+
+.cart-item {
+    flex: 1 1 0;
+}
+
+.cart-img-container {
+    height: 75vh;
+    background-color: rgb(240, 238, 237);
+
+}
+
+.cart-item-detail-container {
+    padding: 0 20px;
+    color: rgb(21, 58, 91);
+
+}
+
+.button {
+    margin: 15px 0;
+    float: left;
+    /* margin: 0 5px 0 0; */
+    width: 50%;
+    height: 40px;
+    text-align: center;
+    position: relative;
+    color: rgb(21, 58, 91);
+}
+
+.btn-default {
+    padding: 10px 25px;
+    margin: 0 1%;
+}
+
+.button label,
+.button input {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid rgb(204, 215, 224);
+}
+
+.button input[type="radio"] {
+    opacity: 0.011;
+    z-index: 100;
+}
+
+.button input[type="radio"]:checked+label {
+
+    border: 2px solid rgb(21, 58, 91);
+}
+
+.button label {
+    cursor: pointer;
+    z-index: 90;
+    line-height: 1.8rem;
+}
+
+.btn-cart {
+    padding: 15px 20px;
+    width: 100%;
+    color: rgb(21, 58, 91);
+    font-weight: 700;
+    border-color: rgb(21, 58, 91);
+}
+
+.info>p,
+.info-more>div {
+    text-align: center;
+    font-size: 12px !important;
+}
+
+.info-more {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.info-more>div {
+    flex: 1 1 0;
+}
+
+hr {
+    margin: 25px 0px;
+
+}
+
+.bottle-txt {
+    font-size: 15px !important;
+    font-weight: 400;
+    line-height: 25px;
+}

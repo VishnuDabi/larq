@@ -8,7 +8,19 @@ const Mission = () => {
   return (
     <section className="">
       <div className="mission-container">
-        <div className="mission-container-text">
+        <button
+          className={learnMore ? "active-back-btn  btn" : "back-btn btn"}
+          onClick={() => setLearnMore(!learnMore)}
+        >
+          Back
+        </button>
+        <div
+          className={
+            learnMore
+              ? "active-mission-container-text"
+              : "mission-container-text"
+          }
+        >
           <span>Our Mission</span>
           <h1>Drink brilliantly</h1>
           <br />
@@ -25,6 +37,7 @@ const Mission = () => {
           className={
             learnMore ? "active-learn-more-container" : "learn-more-container"
           }
+          onClick={() => setLearnMore(!learnMore)}
         >
           <div className="learn-more-card">
             {data.map((item, index) => {

@@ -1,9 +1,13 @@
 .trending-shop-card {
-    background-color: #F6F6F6;
+
     height: 600;
     width: 420px;
     border-radius: 20px;
-    padding-bottom: 100px;
+    padding-bottom: 30px;
+}
+
+.shop-card-img {
+    overflow: hidden;
 }
 
 .shop-card-txt {
@@ -48,4 +52,8 @@
 
 .bg-pink {
     background-color: #FDF7F9;
+}
+
+.bg-default {
+    background-color: #F6F6F6;
 }

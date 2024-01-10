@@ -89,7 +89,6 @@ export let data = [
     option: [
       "https://res.cloudinary.com/larq/image/upload/q_auto,f_auto/w_900/v1701177839/SKU/SPA/v3/BFDOB050A.png",
       "https://res.cloudinary.com/larq/image/upload/q_auto,f_auto/w_900/v1701177839/SKU/SPA/v3/BFDGW050A.png",
-      "",
     ],
 
     price: ["From $49.95", "From $49.95"],

@@ -3,6 +3,7 @@ import "./trending-card.css";
 import { data } from "./data";
 const TrendingCard = ({ Props }) => {
   const [img, setImg] = useState(false);
+  console.log(Props.cap.includes("Blue"));
   const imageChangeHandler = (v, i) => {
     data.forEach((item, index) => {
       // console.log();
@@ -17,9 +18,31 @@ const TrendingCard = ({ Props }) => {
   return (
     <>
       <section className="trending-card">
-        <div className="trending-shop-card">
+        <div
+          className={
+            Props.cap.includes("Blue")
+              ? "trending-shop-card bg-blue  "
+              : Props.cap.includes("Green")
+              ? "trending-shop-card bg-green "
+              : Props.cap.includes("White")
+              ? "trending-shop-card bg-white "
+              : Props.cap.includes("Black")
+              ? "trending-shop-card bg-black "
+              : Props.cap.includes("Mint")
+              ? "trending-shop-card bg-mint "
+              : Props.cap.includes("Pink")
+              ? "trending-shop-card bg-pink "
+              : "trending-shop-card bg-default "
+          }
+
+          // className="trending-shop-card"
+        >
           <div className="shop-card-img">
-            <img className="img" src={Props.src} alt="" />
+            <img
+              className={Props.cap.includes("34 oz") ? "img-scale" : "img"}
+              src={Props.src}
+              alt=""
+            />
           </div>
           <div className="shop-card-txt">
             <h5>{Props.h5}</h5>
@@ -27,7 +50,7 @@ const TrendingCard = ({ Props }) => {
             <div className="shop-card-option">
               {Props.option.map((v, i) => {
                 return (
-                  <div key={i} className="option-img">
+                  <div key={i + v} className="option-img">
                     <img
                       className="img"
                       src={v}

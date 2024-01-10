@@ -1,4 +1,5 @@
 import "./App.css";
+import Cart from "./Components/Cart/Cart";
 import Economical from "./Components/Economical/Economical";
 import Footer from "./Components/Footer/Footer";
 import Header from "./Components/Header/Header";
@@ -11,6 +12,7 @@ import NowTrending from "./Components/Trending/NowTrending";
 function App() {
   return (
     <div>
+      {/* <Cart /> */}
       <Header />
       <Home />
       <Review />

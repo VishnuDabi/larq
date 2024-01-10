@@ -1,0 +1,28 @@
+.checkout-main-container {
+    position: absolute;
+    overflow: hidden;
+    width: 30%;
+    padding: 10px 100px;
+    height: 100vh;
+    z-index: 99;
+    right: 0;
+    background-color: aliceblue;
+}
+
+.active-checkout-main-container {
+
+    display: block;
+    right: 0;
+
+    transition: all 0.3s ease-in-out;
+    z-index: 99;
+}
+
+.checkout {
+    width: 30%;
+    display: block;
+    right: 0;
+    transform: translate(0vw);
+    transition: all 0.3s ease-in-out;
+    z-index: 99;
+}

@@ -1,0 +1,97 @@
+.menu-container-block {
+
+    width: 100%;
+    background-color: aliceblue;
+    height: calc(100vh - 100px);
+    z-index: 3;
+    position: absolute;
+    top: 100px;
+    transition: all 0.6s ease-in-out;
+
+    display: block;
+    padding: 20px;
+
+}
+
+.menu-container-none {
+    width: 0%;
+    transform: translateX(-100vw);
+    transition: all 0.6s ease-in-out;
+    position: absolute;
+    display: block;
+
+    background-color: aliceblue;
+    height: 100vh;
+    z-index: 3;
+}
+
+.menu-cards-container {
+    display: flex;
+    gap: 25px;
+    width: 100%;
+    position: relative;
+    height: 50vh;
+}
+
+.menu-cards {
+    flex: 1 0 0;
+
+    overflow: hidden;
+    display: flex;
+    position: relative;
+
+}
+
+.menu-cards>div {
+    height: 100%;
+    width: 100%;
+}
+
+.menu-img {
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+
+}
+
+.menu-txt-container {
+    position: absolute;
+    bottom: 10%;
+    color: white;
+    text-align: center;
+    width: 80%;
+    left: 10%;
+}
+
+.menu-txt-container>h6 {
+    padding-bottom: 10px;
+
+}
+
+.menu-txt-container>p {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.hb-menu-links {
+    display: flex;
+    flex-direction: column;
+    max-width: fit-content;
+
+}
+
+.hb-menu-links>button:nth-last-child(-n+5) {
+    text-align: start;
+    padding-left: 20px;
+}
+
+.hb-menu-links>button:nth-child(-n+2) {
+    background-color: transparent;
+    border: 1px solid rgb(21, 58, 91);
+}
+
+.hb-menu-links>button {
+    margin: 10px 0px;
+
+
+}

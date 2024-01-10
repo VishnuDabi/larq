@@ -1,5 +1,6 @@
 export let menuData1 = [
   {
+    id: 1,
     active: "true",
     btn1: "all",
     btn2: "Filters & Accessories",
@@ -18,6 +19,8 @@ export let menuData1 = [
 
 export let menuData2 = [
   {
+    id: 2,
+
     btn1: "Purification",
     btn2: "Filters & Accessories",
     src1: "https://res.cloudinary.com/larq/image/upload/q_auto,f_auto/w_900/v1701177839/SKU/SPA/v3/BDMB050A.png",
@@ -34,6 +37,8 @@ export let menuData2 = [
 ];
 export let menuData3 = [
   {
+    id: 3,
+
     btn1: "Home",
     btn2: "Filters & Accessories",
     src1: "https://res.cloudinary.com/larq/image/upload/q_auto,f_auto/w_900/v1701177839/SKU/SPA/v3/PAMB190A.png",
@@ -49,6 +54,8 @@ export let menuData3 = [
 ];
 export let menuData4 = [
   {
+    id: 4,
+
     btn1: "Drinkware",
     btn2: "Accessories",
     src1: "https://res.cloudinary.com/larq/image/upload/q_auto,f_auto/w_900/v1701177839/SKU/SPA/v3/BNWOB068A.png",

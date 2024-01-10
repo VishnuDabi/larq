@@ -1,5 +1,5 @@
 import React from "react";
-import "./reviewData";
+
 import "./review.css";
 const Review = () => {
   return (
@@ -18,7 +18,7 @@ const Review = () => {
               <button className="btn">All Reviews</button>
             </div>
           </div>
-          <div className="review-slider-box">
+          <div className="review-slider-box" id="style-1">
             <div className="review-items">
               <div>
                 <p>
