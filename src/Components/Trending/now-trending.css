@@ -2,28 +2,10 @@
     padding: 50px 100px
 }
 
-.trending-shop-card {
-    border: 2px solid black;
-    background-color: rgb(204, 227, 208);
-    height: 600;
-    width: 420px;
-}
-
-.shop-card-txt {
-    text-align: center;
-}
-
-.shop-card-option {
-    text-align: center;
-    margin: auto;
-    height: 120px;
-    width: 80%;
+.trending-flex-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    gap: 20px;
+    border-radius: 20px;
+    overflow-x: scroll;
 
-.option-img {
-    height: 115px;
-    width: 100px;
 }

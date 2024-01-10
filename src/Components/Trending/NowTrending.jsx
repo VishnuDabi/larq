@@ -8,15 +8,17 @@ const NowTrending = () => {
       <div className="trending-wrapper blue">
         <h1>Now trending</h1>
         <br />
-        {data.map((item, index) => {
-          return (
-            <>
-              <div key={index}>
-                <TrendingCard Props={item} />
-              </div>
-            </>
-          );
-        })}
+        <div className="trending-flex-container">
+          {data.map((item, index) => {
+            return (
+              <>
+                <div key={index}>
+                  <TrendingCard Props={item} />
+                </div>
+              </>
+            );
+          })}
+        </div>
       </div>
     </section>
   );
