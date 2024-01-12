@@ -1,3 +1,15 @@
+.menu-container-none {
+    width: 0%;
+    transform: translateX(-100vw);
+    transition: all 0.6s ease-in-out;
+    position: absolute;
+    display: block;
+
+    background-color: aliceblue;
+    height: 100vh;
+    z-index: 3;
+}
+
 .menu-container-block {
 
     width: 100%;
@@ -13,17 +25,7 @@
 
 }
 
-.menu-container-none {
-    width: 0%;
-    transform: translateX(-100vw);
-    transition: all 0.6s ease-in-out;
-    position: absolute;
-    display: block;
 
-    background-color: aliceblue;
-    height: 100vh;
-    z-index: 3;
-}
 
 .menu-cards-container {
     display: flex;

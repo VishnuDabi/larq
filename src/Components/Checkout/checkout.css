@@ -1,16 +1,15 @@
 .checkout-main-container {
     position: absolute;
+    display: block;
+    transform: translateX(100vw);
     width: 0%;
     right: 0px;
     top: 0;
     height: 100vh;
     overflow-x: hidden;
-    transform: translateX(10vw);
     transition: all 0.4s ease-in-out;
-    display: block;
+
 }
-
-
 
 .active-checkout-main-container {
     top: 0;

@@ -14,8 +14,8 @@ function App() {
   return (
     <div>
       {/* <Cart /> */}
-      {/* <Header /> */}
       {/* <SingIn /> */}
+      <Header />
       <Home />
       <Review />
       <Shop />
