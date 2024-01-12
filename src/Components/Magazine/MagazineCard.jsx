@@ -5,9 +5,13 @@ const MagazineCard = ({ props, id }) => {
     <section className="mg-card-main">
       <div className="mg-card-container blue" key={id}>
         <div className="mg-card">
-          <img src={props.img} className="mg-img" alt="" />
-          <p>{props.h4}</p>
-          <button className="mg-card-btn blue">{props.rd}</button>
+          <div className="mg-img-container">
+            <img src={props.img} className="mg-img" alt="" />
+          </div>
+          <div className="mg-img-text">
+            <p>{props.h4}</p>
+            <button className="mg-card-btn blue">{props.rd}</button>
+          </div>
         </div>
       </div>
     </section>

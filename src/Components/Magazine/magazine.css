@@ -13,18 +13,13 @@
     font: 300 !important;
 }
 
-.mg-card-btn {
-    border: none;
-    border: none;
-    text-decoration: underline;
-    background: none;
-}
+
 
 .magazine-scoll-container {
     display: flex;
     padding: 0rem 10rem;
     overflow-x: scroll;
-    height: 700px;
+    height: 635px;
 
 }
 

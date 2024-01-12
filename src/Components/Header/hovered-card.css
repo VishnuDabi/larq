@@ -9,7 +9,7 @@
     height: 55vh;
     z-index: 2;
     display: none;
-    gap: 20px;
+    gap: 20px 30px;
     color: #153a5b;
 
 }
@@ -27,11 +27,11 @@
 
 }
 
-.hovered-cards:nth-child(2) {
+.hovered-cards:nth-child(n+2) {
     background-color: rgba(241, 241, 241, 0.871);
 }
 
-.hovered-cards:nth-of-type(3n) {
+.hovered-cards:nth-of-type(3) {
     background-color: #e8e8e8;
 }
 

@@ -18,15 +18,16 @@
     text-align: center;
     margin: auto;
     height: 120px;
-    width: 80%;
+    width: 90%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .option-img {
-    height: 115px;
-    width: 100px;
+
+    height: 100px;
+    width: 90px;
 }
 
 /* card bg color  */

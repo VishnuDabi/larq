@@ -3,7 +3,6 @@ import "./trending-card.css";
 import { data } from "./data";
 const TrendingCard = ({ Props }) => {
   const [img, setImg] = useState(false);
-  console.log(Props.cap.includes("Blue"));
   const imageChangeHandler = (v, i) => {
     data.forEach((item, index) => {
       // console.log();
@@ -52,7 +51,22 @@ const TrendingCard = ({ Props }) => {
                 return (
                   <div key={i + v} className="option-img">
                     <img
-                      className="img"
+                      style={
+                        Props.src === v
+                          ? { border: "1px solid black" }
+                          : Props.src === v
+                          ? { border: "1px solid black" }
+                          : Props.src === v
+                          ? { border: "1px solid black" }
+                          : Props.src === v
+                          ? { border: "1px solid black" }
+                          : Props.src === v
+                          ? { border: "1px solid black" }
+                          : Props.src === v
+                          ? { border: "1px solid black" }
+                          : { border: "none" }
+                      }
+                      className="img border-10"
                       src={v}
                       alt=""
                       onClick={() => imageChangeHandler(v, i)}

@@ -9,7 +9,7 @@ const Review = () => {
           <div className="review-title-container">
             <div>
               <h1>Brilliant</h1>
-              <span>******</span>
+              <span>⭐⭐⭐⭐⭐</span>
               <br />
               <p>based on 10798 reviews</p>
               <br />

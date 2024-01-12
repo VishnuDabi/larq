@@ -8,12 +8,14 @@ import Magazine from "./Components/Magazine/Magazine";
 import Mission from "./Components/Mission/Mission";
 import Review from "./Components/Reviews/Review";
 import Shop from "./Components/Shop Component/Shop";
+import SingIn from "./Components/Signin/SingIn";
 import NowTrending from "./Components/Trending/NowTrending";
 function App() {
   return (
     <div>
       {/* <Cart /> */}
-      <Header />
+      {/* <Header /> */}
+      {/* <SingIn /> */}
       <Home />
       <Review />
       <Shop />

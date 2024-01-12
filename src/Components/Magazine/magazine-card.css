@@ -1,11 +1,37 @@
-.mg-img {
-    height: 80%;
-    width: 100%;
-    border-radius: 15px;
-}
-
 .mg-card {
     height: 100%;
     width: 400px;
     padding: 0px 3rem 0rem 0rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.mg-img-container {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.mg-img {
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.mg-card:hover .mg-img {
+    cursor: pointer;
+    filter: blur(0.6px);
+    transition: 0.9s ease-in-out;
+    transform: scale(1.008);
+
+}
+
+.mg-card-btn {
+    border: none;
+    border: none;
+    text-decoration: underline;
+    background: none;
 }

@@ -1,0 +1,141 @@
+.sign-in-container {
+    width: 100%;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.sign-in-wrapper {
+    display: flex;
+    padding-top: 40px;
+    max-width: 90rem;
+    margin: auto;
+
+}
+
+.sign-in {
+    text-align: start;
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    color: #5A5E60;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.sign-in>label {
+    margin-bottom: 8px;
+}
+
+.sign-in input {
+    padding: 12px 20px;
+    font-size: 1.8rem;
+    border: 1px solid #5A5E60;
+    width: 100%;
+}
+
+/* .sign-in input:focus {
+    border: 1px solid #c95f32;
+} */
+
+.pwd-div {
+    width: 100%;
+    position: relative;
+}
+
+.pwd-show-hide {
+    position: absolute;
+    right: 15px;
+    top: 25%;
+}
+
+.sign-in-forgot-btn {
+    margin: 20px auto;
+}
+
+.btn-sign-in {
+    transition: all 0.4s ease-in-out;
+    padding: 10px 60px;
+    margin: 0 10px;
+    color: white;
+    background-color: rgb(21, 58, 91);
+    font-weight: 700;
+    border: 1.8px solid rgb(21, 58, 91);
+    cursor: pointer;
+}
+
+.btn-sign-in:hover {
+    transition: all 0.4s ease-in-out;
+    padding: 10px 60px;
+    margin: 0 10px;
+    color: rgb(21, 58, 91);
+    background-color: white;
+    font-weight: 700;
+    border: 1.8px solid rgb(21, 58, 91);
+    cursor: pointer;
+}
+
+.sign-in-forgot-btn>a {
+    color: #5A5E60;
+    vertical-align: top;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.new-user {
+    padding: 25px;
+    text-align: start;
+    flex: 1 1 0;
+    background-color: #f2f2f2;
+    font-size: 16px;
+}
+
+.new-user>h6 {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.new-user>p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #5A5E60;
+
+}
+
+.new-user>ul {
+    list-style-position: inside;
+    font-weight: 400;
+    color: #5A5E60;
+}
+
+.new-user>ul>li {
+    padding-left: 25px;
+}
+
+.new-user>p:nth-last-child(1) {
+    text-align: center;
+    margin: 20px 0px;
+}
+
+@media screen and (max-width:880px) {
+
+    .sign-in-forgot-btn>button,
+    a {
+        display: block;
+    }
+
+}
+
+@media screen and (max-width:720px) {
+
+    .sign-in-wrapper {
+        flex-direction: column;
+    }
+
+    .sign-in-forgot-btn>button {
+        width: 100%;
+        display: inline-block;
+    }
+
+}
