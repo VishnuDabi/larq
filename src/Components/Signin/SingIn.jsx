@@ -3,15 +3,16 @@ import "./sign-in.css";
 import { IoMdEye } from "react-icons/io";
 import { IoIosEyeOff } from "react-icons/io";
 import { Link } from "react-router-dom";
-// import { account, ID } from "./lib/appwrite";
-// import { account, ID } from "../../lib/appwite";
-const SingIn = () => {
 
-
-  // async function login(email, password) {
-  //   await account.createEmailSession(email, password);
-  //   setLoggedInUser(await account.get());
-  // }
+const SingIn = ({ login }) => {
+  const [showPassword, setShowPassword] = useState(false);
+  const [loginData, setLoginData] = useState({
+    email: "",
+    password: "",
+  });
+  const dataHandler = (event) => {
+    setLoginData({ ...loginData, [event.target.name]: event.target.value });
+  };
   return (
     <section className="sign-in-container blue">
       <h2>Sign In</h2>
@@ -19,21 +20,42 @@ const SingIn = () => {
         <div className="sign-in">
           <label htmlFor="email">Email Address</label>
 
-          <input type="email" name="" id="email" />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            value={loginData.email}
+            onChange={dataHandler}
+          />
           <br />
           <label htmlFor="password">Password</label>
 
           <div className="pwd-div">
-            <input type="text" id="password" />
+            <input
+              type={showPassword ? "text" : "password"}
+              id="password"
+              name="password"
+              value={loginData.password}
+              onChange={dataHandler}
+            />
             <div className="pwd-show-hide">
-              <IoMdEye className="icon" />
-              {/* <IoIosEyeOff className="icon" /> */}
+              {showPassword ? (
+                <IoIosEyeOff
+                  className="icon"
+                  onClick={() => setShowPassword(!showPassword)}
+                />
+              ) : (
+                <IoMdEye
+                  className="icon"
+                  onClick={() => setShowPassword(!showPassword)}
+                />
+              )}
             </div>
           </div>
           <div className="sign-in-forgot-btn">
             <button
               className="btn-sign-in"
-              // onClick={() => login(email, password)}
+              onClick={() => login(loginData.email, loginData.password)}
             >
               Sign In
             </button>

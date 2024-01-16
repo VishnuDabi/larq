@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./register.css";
-const Register = () => {
+const Register = ({ logout, register, user }) => {
   const [data, setData] = useState({
     name: "",
     email: "",
@@ -28,14 +28,17 @@ const Register = () => {
   const [cityErr, setCityErr] = useState("");
   const [passwordErr, setPasswordErr] = useState("");
 
+  useEffect(() => {
+    validateHandler();
+  }, [data]);
   const dataHandler = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
-    console.log(data);
-    submitHandler();
   };
-  const submitHandler = () => {
+  const validateHandler = async (submit) => {
+    let result = true;
     if (data.email === "") {
       setEmailErr("Please enter valid email ID");
+      result = false;
       return;
     } else if (
       !data.email
@@ -45,76 +48,103 @@ const Register = () => {
         )
     ) {
       setEmailErr("Enter Valid Email id");
+      result = false;
+      return;
     } else {
       setEmailErr("");
     }
-    // if (data.password === "") {
-    //   setPasswordErr("Please Select your password");
-    //   return;
-    // } else if (!data.password.match("^(?=.*[A-Za-z])(?=.*d)[A-Za-zd]{7  ,}$")) {
-    //   setPasswordErr(
-    //     "Passwords must be at least 7 characters and contain both alphabetic and numeric characters."
-    //   );
-    // } else {
-    //   setPasswordErr("");
-    // }
+    if (data.password === "") {
+      setPasswordErr("Please Select your password");
+      result = false;
+      return;
+    } else if (
+      !data.password.match(
+        /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/
+      )
+    ) {
+      setPasswordErr(
+        "Passwords must be at least 7 characters and contain both alphabetic and numeric characters."
+      );
+
+      result = false;
+      return;
+    } else {
+      setPasswordErr("");
+    }
     if (data.confirmPassword === "") {
       setConfirmPasswordErr("Please confirm your password");
+      result = false;
       return;
     } else if (data.password !== data.confirmPassword) {
       setConfirmPasswordErr("Password not matched");
+      result = false;
       return;
     } else {
       setConfirmPasswordErr("");
     }
     if (data.country === "") {
+      console.log(data.country);
       setCountryErr("please select your country");
+      result = false;
       return;
     } else {
       setCountryErr("");
     }
     if (data.Fname === "") {
       setFnameErr("Please Enter your Name");
+      result = false;
       return;
     } else if (data.Fname.length < 4) {
       setFnameErr("Name should be have 4 letters");
+      result = false;
       return;
     } else {
       setFnameErr("");
     }
+
     if (data.Lname === "") {
       setLnameErr("Please Enter your last  Name");
+      result = false;
       return;
     } else if (data.Lname.length < 4) {
       setLnameErr(" Last name should be have 4 letters");
+      result = false;
       return;
     } else {
       setLnameErr("");
     }
-
     if (data.ad1 === "") {
       setAd1Err("Please Provide your Address");
+      result = false;
       return;
     } else {
       setAd1Err("");
     }
     if (data.city === "") {
       setCityErr("Please Enter your city Name");
+
+      result = false;
       return;
     } else {
       setCityErr("");
     }
     if (data.state === "") {
+      setStatetErr("Please enter your city ");
+      result = false;
       return;
-      setCityErr("Please enter your city ");
     } else {
-      setCityErr("");
+      setStatetErr("");
     }
     if (data.zipCode === "") {
       setZipCodeErr("Please Provie your Zip Code ");
+      result = false;
       return;
     } else {
       setZipCodeErr("");
+    }
+    if (result && submit) {
+      register(data.email, data.password, data.Fname);
+      alert("successfully submitted");
     }
   };
   return (
@@ -167,6 +197,8 @@ const Register = () => {
               value={data.confirmPassword}
               id="Cpwd"
             />
+            <br />
+            {confirmPasswordErr && <span> {confirmPasswordErr}</span>}
           </div>
           <div className="rg-child">
             <div className="label-child">
@@ -175,14 +207,13 @@ const Register = () => {
             </div>
             <select
               name="country"
-              onSelect={dataHandler}
+              onChange={dataHandler}
               value={data.country}
               id="country"
             >
-              Select Country
-              <option value="">Select Country</option>
-              <option value="US">United State</option>
-              <option value="Japan">Japan</option>
+              <option>Select Country</option>
+              <option>United State</option>
+              <option>Japan</option>
             </select>
             <br />
             {countryErr && <span> {countryErr}</span>}
@@ -290,6 +321,8 @@ const Register = () => {
               value={data.state}
               id="state"
             />
+            <br />
+            {stateErr && <span> {stateErr}</span>}
           </div>
           <div className="rg-child">
             <div className="label-child">
@@ -323,7 +356,10 @@ const Register = () => {
           </div>
         </div>
       </form>
-      <button className="create-account-btn" onClick={submitHandler}>
+      <button
+        className="create-account-btn"
+        onClick={() => validateHandler("submit")}
+      >
         Create account
       </button>
     </section>

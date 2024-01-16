@@ -8,6 +8,7 @@
 
 .shop-card-img {
     overflow: hidden;
+    cursor: pointer;
 }
 
 .shop-card-txt {

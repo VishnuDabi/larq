@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./trending-card.css";
 import { data } from "./data";
+import { Link } from "react-router-dom";
 const TrendingCard = ({ Props }) => {
   const [img, setImg] = useState(false);
   const imageChangeHandler = (v, i) => {
@@ -37,11 +38,13 @@ const TrendingCard = ({ Props }) => {
           // className="trending-shop-card"
         >
           <div className="shop-card-img">
-            <img
-              className={Props.cap.includes("34 oz") ? "img-scale" : "img"}
-              src={Props.src}
-              alt=""
-            />
+            <Link to="bottle">
+              <img
+                className={Props.cap.includes("34 oz") ? "img-scale" : "img"}
+                src={Props.src}
+                alt=""
+              />
+            </Link>
           </div>
           <div className="shop-card-txt">
             <h5>{Props.h5}</h5>
