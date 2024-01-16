@@ -11,6 +11,7 @@ import { IoIosMenu } from "react-icons/io";
 import Menu from "./Menu";
 import { IoCloseOutline } from "react-icons/io5";
 import Checkout from "../Checkout/Checkout";
+import { Link } from "react-router-dom";
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [checkoutToggle, setCheckoutToggle] = useState(false);
@@ -63,11 +64,13 @@ const Header = () => {
             </div>
 
             <div className="cmp-logo">
-              <img
-                className="img"
-                src="https://www.augmentventures.com/wp-content/uploads/2020/02/larq-logo.jpg"
-                alt=""
-              />
+              <Link to="/">
+                <img
+                  className="img"
+                  src="https://www.augmentventures.com/wp-content/uploads/2020/02/larq-logo.jpg"
+                  alt=""
+                />
+              </Link>
             </div>
             <div className="icons-container">
               <div className="login-icons">
@@ -75,14 +78,18 @@ const Header = () => {
                   <span>technology</span>
                   <span>faq</span>
                   <span>
-                    <CiUser className="icon" />
+                    <Link to="sign-in">
+                      <CiUser className="icon" />
+                    </Link>
                   </span>
-                  <span>
-                    <PiShoppingCart
-                      className="icon"
-                      onClick={checkoutToggleHandler}
-                    />
-                  </span>
+                  <Link>
+                    <span>
+                      <PiShoppingCart
+                        className="icon"
+                        onClick={checkoutToggleHandler}
+                      />
+                    </span>
+                  </Link>
                 </p>
               </div>
             </div>

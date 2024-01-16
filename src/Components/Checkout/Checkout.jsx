@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./checkout.css";
 import { IoClose } from "react-icons/io5";
 import { LuTag } from "react-icons/lu";
+import { Link } from "react-router-dom";
 const Checkout = ({ props, fun }) => {
   const [hovered, setHovered] = useState(false);
   return (
@@ -42,7 +43,7 @@ const Checkout = ({ props, fun }) => {
         </div>
         <span>
           <LuTag className="blue shop-tag " />
-          <a href="..#">Apply coupon code</a>
+          <Link>Apply coupon code</Link>
         </span>
         <br />
         <br />

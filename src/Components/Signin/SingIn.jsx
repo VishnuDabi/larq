@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "./sign-in.css";
 import { IoMdEye } from "react-icons/io";
 import { IoIosEyeOff } from "react-icons/io";
+import { Link } from "react-router-dom";
+// import { account, ID } from "./lib/appwrite";
+// import { account, ID } from "../../lib/appwite";
 const SingIn = () => {
+
+
+  // async function login(email, password) {
+  //   await account.createEmailSession(email, password);
+  //   setLoggedInUser(await account.get());
+  // }
   return (
     <section className="sign-in-container blue">
       <h2>Sign In</h2>
@@ -22,8 +31,14 @@ const SingIn = () => {
             </div>
           </div>
           <div className="sign-in-forgot-btn">
-            <button className="btn-sign-in">Sign In</button>
-            <a href="#1">Forgot your password?</a>
+            <button
+              className="btn-sign-in"
+              // onClick={() => login(email, password)}
+            >
+              Sign In
+            </button>
+
+            <Link>Forgot your password?</Link>
           </div>
         </div>
         <div className="new-user">
@@ -37,9 +52,11 @@ const SingIn = () => {
             <li>Track new orders</li>
           </ul>
           <p>
-            <button className="btn-sign-in create-account-btn">
-              Create account
-            </button>
+            <Link to="/registration">
+              <button className="btn-sign-in create-account-btn">
+                Create account
+              </button>
+            </Link>
           </p>
         </div>
       </div>

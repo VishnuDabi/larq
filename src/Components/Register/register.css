@@ -1,0 +1,72 @@
+.register-main-container {
+    max-width: 90rem;
+    padding: 20px;
+
+    text-align: center;
+    margin: auto;
+
+}
+
+.register-main-container>h3 {
+    margin: 30px 0px;
+}
+
+.registration-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.label-child {
+    display: flex;
+    width: min(430px, 100%);
+    color: #5A5E60 !important;
+    font-weight: 400 !important;
+    justify-content: space-between;
+    padding: 10px 0px;
+}
+
+.registration-form>.rg-child>input,
+select {
+    padding: 10px;
+    width: 100%;
+    width: min(430px, 100%);
+    color: #5A5E60 !important;
+    font-weight: 400 !important;
+}
+
+.registration-form>.rg-child>label {
+    padding: 10px 0px;
+}
+
+.rg-child {
+    /* width: 300px; */
+    flex: 1 1 430px;
+    text-align: start;
+    /* background: #af7979; */
+}
+
+
+.create-account-btn {
+    transition: all 0.4s ease-in-out;
+    margin: 30px 0px;
+    padding: 15px 20px;
+    width: min(340px, 100%);
+    color: white;
+    background-color: rgb(21, 58, 91);
+    font-weight: 700;
+    border: 1.8px solid rgb(21, 58, 91);
+
+
+}
+
+.create-account-btn:hover {
+    transition: all 0.4s ease-in-out;
+    padding: 15px 20px;
+
+    color: rgb(21, 58, 91);
+    background-color: #fff;
+    font-weight: 700;
+    border-color: rgb(21, 58, 91);
+    border: 1.8px solid rgb(21, 58, 91);
+}
