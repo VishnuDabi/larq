@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./trending-card.css";
 import { data } from "./data";
 import { Link } from "react-router-dom";
@@ -15,6 +15,7 @@ const TrendingCard = ({ Props }) => {
       setImg(!img);
     });
   };
+
   return (
     <>
       <section className="trending-card">
@@ -38,7 +39,18 @@ const TrendingCard = ({ Props }) => {
           // className="trending-shop-card"
         >
           <div className="shop-card-img">
-            <Link to="bottle">
+            <Link
+              to="bottle"
+              state={{
+                mainSrc: Props.src,
+                mainName: Props.h5,
+                mainSize: Props.cap,
+                mainAmount: Props.rs,
+                srcOption: Props.option,
+                amountOption: Props.price,
+                sizeOption: Props.size,
+              }}
+            >
               <img
                 className={Props.cap.includes("34 oz") ? "img-scale" : "img"}
                 src={Props.src}

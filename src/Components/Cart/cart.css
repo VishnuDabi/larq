@@ -39,6 +39,7 @@
     margin: 0 1%;
 }
 
+/* bottle capacity buttons start */
 .button label,
 .button input {
     display: block;
@@ -65,6 +66,49 @@
     z-index: 90;
     line-height: 1.8rem;
 }
+
+/* bottle capacity buttons End */
+.radio-option {
+    display: flex;
+}
+
+/*Option  radio buttons  */
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #dfdcdc;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: gainsboro;
+    position: relative;
+    top: 6px;
+}
+
+input[type="radio"]::before {
+    content: "";
+    display: block;
+    height: 40%;
+    width: 40%;
+    transition: all 0.3s ease-in-out;
+    background-color: rgb(99, 198, 175);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: appear 0.8s;
+}
+
+input[type="radio"]:checked:before {
+    transition: all 0.3s ease-in-out;
+    height: 100%;
+    width: 100%;
+}
+
+
+
 
 .btn-cart {
     padding: 15px 20px;

@@ -1,39 +1,65 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./cart.css";
+import { useLocation } from "react-router-dom";
 const Cart = () => {
+  const location = useLocation();
+  const linkProp = location.state;
+  const [data, setData] = useState({
+    url: linkProp.mainSrc,
+    name: linkProp.mainName,
+    amount: linkProp.mainAmount,
+    size: linkProp.mainSize,
+  });
+  // useEffect(() => {
+  //   console.log(data);
+  // }, [data]);
+  function imgHandler(value) {
+    // console.log(value);
+    setData({ ...data, url: value });
+  }
   return (
     <section className="cart-container">
       <div className="cart-wrapper">
         <div className="cart-img-container  cart-item">
-          <img
-            src="https://res.cloudinary.com/larq/image/upload/q_auto,f_auto/w_900/v1701177839/SKU/SPA/v3/BNWOB068A.png"
-            alt=""
-            className="img"
-          />
+          <img src={data.url} alt="" className="img" />
         </div>
         <div className="cart-item-detail-container cart-item">
-          <h1>Pure Vibes</h1>
-          <h4>$115.00</h4>
+          <h3>{data.name}</h3>
+          <h4>{data.amount}</h4>
           <br />
           <span>Size</span>
           <br />
-          <div class="button">
+          <div className="button">
             <input type="radio" id="17-oz" name="size" value="17 oz" />
-            <label class=" btn-default" htmlFor="17-oz">
+            <label className=" btn-default" htmlFor="17-oz">
               17 oz
             </label>
           </div>
           <div className="button">
             <input type="radio" id="23-oz" name="size" value="23 oz" />
-            <label class=" btn-default" htmlFor="23-oz">
+            <label className=" btn-default" htmlFor="23-oz">
               23 oz
             </label>
           </div>
-          <span>Obsidian Black</span>
+          <span>{data.size}</span>
           <br />
-          <input type="radio" name="color-name" id="" />
-          <input type="radio" name="color-name" id="" />
-          <input type="radio" name="color-name" id="" />
+          <div className="radio-option">
+            {linkProp.srcOption.map((value, index) => {
+              return (
+                <div key={index}>
+                  <input
+                    type="radio"
+                    name="color-name"
+                    id=""
+                    value={value}
+                    onClick={() => imgHandler(value)}
+                  />
+                </div>
+              );
+            })}
+          </div>
+          {/* <input type="radio" name="color-name" id="" />B
+          <input type="radio" name="color-name" id="" />C */}
           <br />
           <button className="btn-cart">Add to cart-$115.00</button>
           <div className="info">
