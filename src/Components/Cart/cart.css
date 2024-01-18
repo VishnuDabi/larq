@@ -32,7 +32,7 @@
     text-align: center;
     position: relative;
     color: rgb(21, 58, 91);
-    z-index: -1;
+    z-index: 1;
 }
 
 .btn-default {
@@ -145,12 +145,23 @@ input[type="radio"]:checked:before {
     width: 100%;
 }
 
-.btn-cart {
+.cart-item .btn-cart {
+    padding: 15px 20px;
+    width: 100%;
+    color: #f0f0f0;
+    font-weight: 700;
+    border-color: rgb(21, 58, 91);
+    background-color: rgb(21, 58, 91);
+    margin-bottom: 10px;
+}
+
+.cart-item .btn-cart:hover {
     padding: 15px 20px;
     width: 100%;
     color: rgb(21, 58, 91);
     font-weight: 700;
     border-color: rgb(21, 58, 91);
+    background-color: #f0f0f0;
 }
 
 .info>p,
