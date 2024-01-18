@@ -82,7 +82,7 @@ function App() {
             />
           }
         />
-        <Route path="/bottle" element={<Cart />} />
+        <Route path="/bottle/:targetIndex" element={<Cart />} />
       </Routes>
       <Footer />
     </div>

@@ -1,31 +1,36 @@
 import React, { useEffect, useState } from "react";
 import "./cart.css";
-import { useLocation } from "react-router-dom";
+import { data as rdata } from "../Trending/data";
+import { useLocation, useParams } from "react-router-dom";
 const Cart = () => {
+  const tr = useParams();
   const location = useLocation();
   const linkProp = location.state;
-  const [data, setData] = useState({
-    url: linkProp.mainSrc,
-    name: linkProp.mainName,
-    amount: linkProp.mainAmount,
-    size: linkProp.mainSize,
-  });
-  // useEffect(() => {
-  //   console.log(data);
-  // }, [data]);
-  function imgHandler(value) {
-    // console.log(value);
-    setData({ ...data, url: value });
+  const [data, setData] = useState({});
+
+  useEffect(() => {
+    rdata.forEach((value, index) => {
+      if (index === Number(tr.targetIndex)) {
+        setData(value);
+      }
+    });
+  }, []);
+
+  function imgHandler(value, name, rs) {
+    console.log(value);
+    setData({ ...data, src: value, cap: name, rs: rs });
   }
+  console.log(data);
+
   return (
     <section className="cart-container">
       <div className="cart-wrapper">
         <div className="cart-img-container  cart-item">
-          <img src={data.url} alt="" className="img" />
+          <img src={data.src} alt="" className="img" />
         </div>
         <div className="cart-item-detail-container cart-item">
-          <h3>{data.name}</h3>
-          <h4>{data.amount}</h4>
+          <h3>{data.h5}</h3>
+          <h4>{data.rs}</h4>
           <br />
           <span>Size</span>
           <br />
@@ -41,27 +46,48 @@ const Cart = () => {
               23 oz
             </label>
           </div>
-          <span>{data.size}</span>
+          <span>{data.cap}</span>
           <br />
           <div className="radio-option">
-            {linkProp.srcOption.map((value, index) => {
-              return (
-                <div key={index}>
-                  <input
-                    type="radio"
-                    name="color-name"
-                    id=""
-                    value={value}
-                    onClick={() => imgHandler(value)}
-                  />
-                </div>
-              );
-            })}
+            {data.option ? (
+              <>
+                {data.option.map((value, index) => {
+                  return (
+                    <div key={index}>
+                      <input
+                        type="radio"
+                        name="color-name"
+                        id=""
+                        className={
+                          data.size[index].includes("Blue")
+                            ? " radio-bg-blue  "
+                            : data.size[index].includes("White")
+                            ? "radio-bg-white "
+                            : data.size[index].includes("Black")
+                            ? " radio-bg-black"
+                            : data.size[index].includes("Mint")
+                            ? " radio-bg-mint "
+                            : data.size[index].includes("Pink")
+                            ? " radio-bg-pink "
+                            : " radio-bg-default"
+                        }
+                        // checked={data.size[index] === data.h5 ? true : false}
+                        value={(value, data)}
+                        onClick={() =>
+                          imgHandler(value, data.size[index], data.price[index])
+                        }
+                      />
+                    </div>
+                  );
+                })}
+              </>
+            ) : (
+              "no"
+            )}
           </div>
-          {/* <input type="radio" name="color-name" id="" />B
-          <input type="radio" name="color-name" id="" />C */}
+
           <br />
-          <button className="btn-cart">Add to cart-$115.00</button>
+          <button className="btn-cart">Add to cart-{data.rs}</button>
           <div className="info">
             <p>Or 4 interest-free installments of $28.75</p>
             <p>Free shipping within the contiguous U.S. on orders over $80.</p>

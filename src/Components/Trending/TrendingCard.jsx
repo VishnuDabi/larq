@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./trending-card.css";
 import { data } from "./data";
 import { Link } from "react-router-dom";
-const TrendingCard = ({ Props }) => {
+import { cartData } from "../Cart/cartData";
+const TrendingCard = ({ Props, Index }) => {
   const [img, setImg] = useState(false);
   const imageChangeHandler = (v, i) => {
     data.forEach((item, index) => {
@@ -21,18 +22,20 @@ const TrendingCard = ({ Props }) => {
       <section className="trending-card">
         <div
           className={
-            Props.cap.includes("Blue")
-              ? "trending-shop-card bg-blue  "
-              : Props.cap.includes("Green")
-              ? "trending-shop-card bg-green "
-              : Props.cap.includes("White")
-              ? "trending-shop-card bg-white "
-              : Props.cap.includes("Black")
-              ? "trending-shop-card bg-black "
-              : Props.cap.includes("Mint")
-              ? "trending-shop-card bg-mint "
-              : Props.cap.includes("Pink")
-              ? "trending-shop-card bg-pink "
+            Props.cap !== undefined
+              ? Props.cap.includes("Blue")
+                ? "trending-shop-card bg-blue  "
+                : Props.cap.includes("Green")
+                ? "trending-shop-card bg-green "
+                : Props.cap.includes("White")
+                ? "trending-shop-card bg-white "
+                : Props.cap.includes("Black")
+                ? "trending-shop-card bg-black "
+                : Props.cap.includes("Mint")
+                ? "trending-shop-card bg-mint "
+                : Props.cap.includes("Pink")
+                ? "trending-shop-card bg-pink "
+                : "trending-shop-card bg-default "
               : "trending-shop-card bg-default "
           }
 
@@ -40,7 +43,8 @@ const TrendingCard = ({ Props }) => {
         >
           <div className="shop-card-img">
             <Link
-              to="bottle"
+              // to="bottle"
+              to={`bottle/${Index}`}
               state={{
                 mainSrc: Props.src,
                 mainName: Props.h5,
@@ -90,7 +94,7 @@ const TrendingCard = ({ Props }) => {
                 );
               })}
             </div>
-            <p>{Props.rs}</p>
+            <p> From {Props.rs}</p>
           </div>
         </div>
       </section>

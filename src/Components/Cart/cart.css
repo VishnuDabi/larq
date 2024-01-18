@@ -32,6 +32,7 @@
     text-align: center;
     position: relative;
     color: rgb(21, 58, 91);
+    z-index: -1;
 }
 
 .btn-default {
@@ -81,7 +82,7 @@ input[type="radio"] {
     border: 1px solid #dfdcdc;
     border-radius: 50%;
     margin-right: 10px;
-    background-color: gainsboro;
+    background-color: transparent;
     position: relative;
     top: 6px;
 }
@@ -89,10 +90,10 @@ input[type="radio"] {
 input[type="radio"]::before {
     content: "";
     display: block;
-    height: 40%;
-    width: 40%;
+    height: 65%;
+    width: 65%;
     transition: all 0.3s ease-in-out;
-    background-color: rgb(99, 198, 175);
+    /* background-color: rgb(99, 198, 175); */
     border-radius: 50%;
     position: absolute;
     top: 50%;
@@ -101,14 +102,48 @@ input[type="radio"]::before {
     animation: appear 0.8s;
 }
 
+.radio-bg-blue::before {
+    background-color: rgb(21, 50, 91);
+
+}
+
+.radio-bg-green::before {
+    background-color: rgb(113, 187, 166);
+
+}
+
+.radio-bg-black::before {
+    background-color: rgb(33, 32, 32);
+
+}
+
+.radio-bg-mint::before {
+    background-color: #c9e0df;
+
+}
+
+.radio-bg-white::before {
+    background-color: #D7D7D7;
+
+}
+
+.radio-bg-pink::before {
+    background-color: #E3AEAE;
+
+}
+
+.radio-bg-default::before {
+    background-color: #f0f0f0;
+
+}
+
+
+
 input[type="radio"]:checked:before {
     transition: all 0.3s ease-in-out;
     height: 100%;
     width: 100%;
 }
-
-
-
 
 .btn-cart {
     padding: 15px 20px;

@@ -12,7 +12,7 @@ const NowTrending = () => {
           {data.map((item, index) => {
             return (
               <div key={index + item.h5}>
-                <TrendingCard Props={item} />
+                <TrendingCard Props={item} Index={index}  />
               </div>
             );
           })}
