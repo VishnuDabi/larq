@@ -3,8 +3,20 @@ import "./checkout.css";
 import { IoClose } from "react-icons/io5";
 import { LuTag } from "react-icons/lu";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { AiTwotoneDelete } from "react-icons/ai";
+import { removeItem } from "../../Redux/features/counter/cartSlice";
 const Checkout = ({ props, fun }) => {
   const [hovered, setHovered] = useState(false);
+  const [quantity, setQuantity] = useState(1);
+  const cartItems = useSelector((state) => state.cart.items);
+  const dispatch = useDispatch();
+
+  console.log(cartItems);
+  const handleDeleteProduct = (item) => {
+    dispatch(removeItem(item));
+  };
+
   return (
     <div
       className={
@@ -26,20 +38,46 @@ const Checkout = ({ props, fun }) => {
             </div>
           </div>
           <p>You're $150.00 away from $10 in store credit!</p>
+          {cartItems.map((item, index) => {
+            return (
+              <div key={index}>
+                <div className="cart-items">
+                  <div className="cart-items-img ">
+                    <img className="img" src={item.src} alt="cart-item" />
+                  </div>
+                  <div className="cart-items-name">
+                    <h6>{item.h5}</h6>
 
-          <div className="cart-items">
-            <div>
-              <img src="" alt="cart-item" />
-            </div>
-            <div>bottle name</div>
-            <div> delete or amount</div>
-          </div>
-          <hr />
-          <div className="subtotal">
-            <h6>Subtotal</h6>
-            <h6>$123</h6>
-          </div>
-          <hr />
+                    <span>{item.cap}</span>
+                    <span>{item.bottleSize}</span>
+                    <br />
+                    <span className="quantity-btn">
+                      <button className="decreament-btn">-</button>
+                      <input type="text" value={quantity} readOnly />
+                      <button className="increament-btn">+</button>
+                    </span>
+                  </div>
+                  <div className="cart-items-div">
+                    <span>
+                      <AiTwotoneDelete
+                        onClick={() => handleDeleteProduct(item)}
+                        className="icon"
+                      />
+                    </span>
+                    <br />
+                    <br />
+                    <span>{item.rs}</span>
+                  </div>
+                </div>
+                <hr />
+                {/* <div className="subtotal">
+                  <h6>Subtotal</h6>
+                  <h6>$123</h6>
+                </div>
+                <hr /> */}
+              </div>
+            );
+          })}
         </div>
         <span>
           <LuTag className="blue shop-tag " />

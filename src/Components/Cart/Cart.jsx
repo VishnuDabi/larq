@@ -6,16 +6,22 @@ import { BsFillInfoCircleFill } from "react-icons/bs";
 import { IoIosCheckmarkCircleOutline } from "react-icons/io";
 import { IoArrowBackCircleOutline } from "react-icons/io5";
 import { HiOutlineShieldCheck } from "react-icons/hi2";
+import { useDispatch, useSelector } from "react-redux";
+import { addItem, removeItem } from "../../Redux/features/counter/cartSlice";
 const Cart = () => {
+  const dispatch = useDispatch();
+  const cartItems = useSelector((state) => state.cart.items);
   const tr = useParams();
 
   const [data, setData] = useState({});
   const [imgScaler, setImgScaler] = useState(false);
+  const [bottleSize, setBottleSize] = useState("17 oz");
   useEffect(() => {
     localData.forEach((value, index) => {
       if (index === Number(tr.targetIndex)) {
         setData(value);
       }
+      // console.log(tr.targetIndex);
     });
   }, [tr.targetIndex]);
   function imgHandler(value, name, rs) {
@@ -23,6 +29,10 @@ const Cart = () => {
     data.src = value;
     setData({ ...data, src: value, cap: name, rs: rs });
   }
+  const handleAddItem = (item) => {
+    dispatch(addItem(item));
+  };
+  // console.log(cartItems);
 
   return (
     <section className="cart-container">
@@ -48,7 +58,10 @@ const Cart = () => {
               id="23-oz"
               name="size"
               value="23 oz"
-              onChange={() => setImgScaler(false)}
+              onChange={(event) => {
+                setImgScaler(false);
+                setBottleSize(event.target.value);
+              }}
             />
             <label className=" btn-default" htmlFor="23-oz">
               23 oz
@@ -60,7 +73,10 @@ const Cart = () => {
               id="34-oz"
               name="size"
               value="34 oz"
-              onChange={() => setImgScaler(true)}
+              onChange={(event) => {
+                setImgScaler(true);
+                setBottleSize(event.target.value);
+              }}
             />
             <label className=" btn-default" htmlFor="34-oz">
               34 oz
@@ -118,7 +134,22 @@ const Cart = () => {
           )}
 
           <br />
-          <button className="btn-cart">Add to cart-{data.rs}</button>
+          <button
+            className="btn-cart"
+            onClick={() =>
+              handleAddItem({
+                id: tr.targetIndex,
+                bottleSize: bottleSize,
+                src:data.src,
+                cap: data.cap,
+                rs: data.rs,
+                h5:data.h5,
+                qn: 1
+              })
+            }
+          >
+            Add to cart-{data.rs}
+          </button>
           <div className="info">
             <p>
               Or 4 interest-free installments of $28.75{" "}
