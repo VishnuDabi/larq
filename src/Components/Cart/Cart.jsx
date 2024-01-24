@@ -6,16 +6,16 @@ import { BsFillInfoCircleFill } from "react-icons/bs";
 import { IoIosCheckmarkCircleOutline } from "react-icons/io";
 import { IoArrowBackCircleOutline } from "react-icons/io5";
 import { HiOutlineShieldCheck } from "react-icons/hi2";
-import { useDispatch, useSelector } from "react-redux";
-import { addItem, removeItem } from "../../Redux/features/counter/cartSlice";
+import { useDispatch } from "react-redux";
+import { addItem } from "../../Redux/features/counter/cartSlice";
 const Cart = () => {
   const dispatch = useDispatch();
-  const cartItems = useSelector((state) => state.cart.items);
+  // const cartItems = useSelector((state) => state.cart.items);
   const tr = useParams();
 
   const [data, setData] = useState({});
   const [imgScaler, setImgScaler] = useState(false);
-  const [bottleSize, setBottleSize] = useState("17 oz");
+  const [bottleSize, setBottleSize] = useState("23 oz");
   useEffect(() => {
     localData.forEach((value, index) => {
       if (index === Number(tr.targetIndex)) {
@@ -48,7 +48,7 @@ const Cart = () => {
         </div>
         <div className="cart-item-detail-container cart-item">
           <h3>{data.h5}</h3>
-          <h4>{data.rs}</h4>
+          <h4>${data.rs}</h4>
           <br />
           <span>Size</span>
           <br />
@@ -140,15 +140,16 @@ const Cart = () => {
               handleAddItem({
                 id: tr.targetIndex,
                 bottleSize: bottleSize,
-                src:data.src,
+                src: data.src,
                 cap: data.cap,
                 rs: data.rs,
-                h5:data.h5,
-                qn: 1
+                h5: data.h5,
+                totalQuantities: 1,
+                totalPrice:data.rs
               })
             }
           >
-            Add to cart-{data.rs}
+            Add to cart-${data.rs}
           </button>
           <div className="info">
             <p>

@@ -94,7 +94,7 @@ const TrendingCard = ({ Props, Index }) => {
                 );
               })}
             </div>
-            <p> From {Props.rs}</p>
+            <span> From ${Props.rs}</span>
           </div>
         </div>
       </section>
