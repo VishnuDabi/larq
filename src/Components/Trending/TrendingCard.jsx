@@ -7,13 +7,16 @@ const TrendingCard = ({ Props, Index }) => {
   const [img, setImg] = useState(false);
   const imageChangeHandler = (v, i) => {
     data.forEach((item, index) => {
-      // console.log();
-      item.src = v;
-      // item.h5 = item.name[i];
-      item.cap = item.size[i];
-      item.rs = item.price[i];
-
-      setImg(!img);
+      if (Index === index) {
+        item.src = v;
+        // item.h5 = item.name[i];
+        item.cap = item.size[i];
+        item.rs = item.price[i];
+        if (item.grossAmount) {
+          item.grossAmount = item.grossAmountOption[i];
+        }
+        setImg(!img);
+      }
     });
   };
 
@@ -94,7 +97,13 @@ const TrendingCard = ({ Props, Index }) => {
                 );
               })}
             </div>
-            <span> From ${Props.rs}</span>
+            <span>
+              From{" "}
+              {Props.grossAmount ? (
+                <span className="gross-amount">${Props.grossAmount + " "}</span>
+              ) : null}
+              ${Props.rs}
+            </span>
           </div>
         </div>
       </section>

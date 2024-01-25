@@ -9,7 +9,12 @@ const Menu = ({ props }) => {
             <img
               src="https://res.cloudinary.com/larq/image/upload/q_auto,f_auto/v1692781791/Homepage-v3/Navigation/update/purification-big.jpg"
               alt=""
-              className=" menu-img"
+              className=" menu-img menu-img-0"
+            />
+            <img
+              src="https://res.cloudinary.com/larq/image/upload/w_300/v1692781791/Homepage-v3/Navigation/update/purification-small.png"
+              alt=""
+              className="menu-img menu-img-1"
             />
             <div className="menu-txt-container">
               <h6>Purification</h6>
@@ -22,7 +27,12 @@ const Menu = ({ props }) => {
             <img
               src="https://res.cloudinary.com/larq/image/upload/q_auto,f_auto/v1692781790/Homepage-v3/Navigation/update/home-big.jpg"
               alt=""
-              className=" menu-img"
+              className=" menu-img menu-img-0"
+            />
+            <img
+              src="https://res.cloudinary.com/larq/image/upload/w_300/v1692781790/Homepage-v3/Navigation/update/home-small.png"
+              alt=""
+              className=" menu-img menu-img-1"
             />
             <div className="menu-txt-container">
               <h6>Home</h6>
@@ -35,7 +45,12 @@ const Menu = ({ props }) => {
             <img
               src=" https://res.cloudinary.com/larq/image/upload/q_auto,f_auto/v1692781790/Homepage-v3/Navigation/update/drinkware-big-us.jpg"
               alt=""
-              className=" menu-img"
+              className=" menu-img menu-img-0"
+            />
+            <img
+              src=" https://res.cloudinary.com/larq/image/upload/w_300/v1692781790/Homepage-v3/Navigation/update/drinkware-small-us.png"
+              alt=""
+              className=" menu-img menu-img-1"
             />
             <div className="menu-txt-container">
               <h6>Drinkware</h6>

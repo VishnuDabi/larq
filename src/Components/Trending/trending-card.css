@@ -31,6 +31,18 @@
     width: 90px;
 }
 
+.shop-card-txt p,
+span {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.gross-amount {
+    text-decoration: line-through;
+    margin-right: 5px;
+}
+
+
 /* card bg color  */
 .bg-blue {
     background-color: #EFF0F5;

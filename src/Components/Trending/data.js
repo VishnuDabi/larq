@@ -4,6 +4,8 @@ export let data = [
     h5: "Jolly Good Swig",
     cap: "23 oz",
     rs: "99",
+    grossAmount: "119.85",
+    grossAmountOption: [119.85, 129.85],
 
     option: [
       "https://res.cloudinary.com/larq/image/upload/q_auto,f_auto/w_900/v1701177839/SKU/SPA/v3/SET-3XSWIGM.png",
@@ -18,7 +20,8 @@ export let data = [
     h5: "Pure Vibes",
     cap: "Obsidian Black",
     rs: "99",
-
+    grossAmount: "129.85",
+    grossAmountOption: [129.85, 140.99, 129.99],
     option: [
       "https://res.cloudinary.com/larq/image/upload/q_auto,f_auto/w_900/v1701177839/SKU/SPA/v3/SET-FLIP-UVC-STRAW-M-OB.png",
       "https://res.cloudinary.com/larq/image/upload/q_auto,f_auto/w_900/v1701177839/SKU/SPA/v3/SET-FLIP-UVC-STRAW-M-SM.png",
@@ -56,7 +59,8 @@ export let data = [
     h5: "LARQ Pitcher PureVis™",
     cap: "Monaco Blue",
     rs: "139",
-
+    grossAmount: "168",
+    grossAmountOption: [119.85, 129.85],
     option: [
       "https://res.cloudinary.com/larq/image/upload/q_auto,f_auto/w_900/v1701177839/SKU/SPA/v3/PAMB190A.png",
       "https://res.cloudinary.com/larq/image/upload/q_auto,f_auto/w_900/v1701177839/SKU/SPA/v3/PAPW190A.png",
@@ -85,6 +89,8 @@ export let data = [
     h5: "LARQ Bottle Filtered",
     cap: "Obsidian Black",
     rs: "49.95",
+    grossAmount: "58",
+    grossAmountOption: [58, 58],
 
     option: [
       "https://res.cloudinary.com/larq/image/upload/q_auto,f_auto/w_900/v1701177839/SKU/SPA/v3/BFDOB050A.png",
@@ -100,6 +106,7 @@ export let data = [
     cap: "Obsidian Black",
     rs: "39.95",
 
+    grossAmountOption: [119.85, 129.85],
     option: [
       "https://res.cloudinary.com/larq/image/upload/q_auto,f_auto/w_900/v1701177839/SKU/SPA/v3/BNSOB050A.png",
       "https://res.cloudinary.com/larq/image/upload/q_auto,f_auto/w_900/v1701177839/SKU/SPA/v3/BNSSM050A.png",
@@ -129,7 +136,7 @@ export let data = [
       "Obsidian Black",
       "Seaside Mint",
       "Granite White",
-      "Granite White",
+      "Himalayan Pink",
     ],
   },
 ];

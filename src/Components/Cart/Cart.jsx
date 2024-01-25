@@ -20,14 +20,29 @@ const Cart = () => {
     localData.forEach((value, index) => {
       if (index === Number(tr.targetIndex)) {
         setData(value);
+        console.log(data);
       }
-      // console.log(tr.targetIndex);
     });
   }, [tr.targetIndex]);
-  function imgHandler(value, name, rs) {
+  function imgHandler(value, name, rs, grossAmount) {
     // console.log(value);
     data.src = value;
-    setData({ ...data, src: value, cap: name, rs: rs });
+    if (grossAmount) {
+      setData({
+        ...data,
+        src: value,
+        cap: name,
+        rs: rs,
+        grossAmount: grossAmount,
+      });
+    } else {
+      setData({
+        ...data,
+        src: value,
+        cap: name,
+        rs: rs,
+      });
+    }
   }
   const handleAddItem = (item) => {
     dispatch(addItem(item));
@@ -48,7 +63,13 @@ const Cart = () => {
         </div>
         <div className="cart-item-detail-container cart-item">
           <h3>{data.h5}</h3>
-          <h4>${data.rs}</h4>
+          <h4>
+            {data.grossAmount ? (
+              <em className="gross-amount">${data.grossAmount + "  "}</em>
+            ) : null}
+            ${data.rs}
+          </h4>
+          ⭐⭐⭐⭐6356 reviews
           <br />
           <span>Size</span>
           <br />
@@ -93,35 +114,70 @@ const Cart = () => {
                     {data.option.map((value, index) => {
                       return (
                         <div key={index}>
-                          <input
-                            type="radio"
-                            name="color-name"
-                            id=""
-                            className={
-                              data.size[index].includes("Blue")
-                                ? " radio-bg-blue  "
-                                : data.size[index].includes("White")
-                                ? "radio-bg-white "
-                                : data.size[index].includes("Black")
-                                ? " radio-bg-black"
-                                : data.size[index].includes("Mint")
-                                ? " radio-bg-mint "
-                                : data.size[index].includes("Pink")
-                                ? " radio-bg-pink "
-                                : " radio-bg-default"
-                            }
-                            checked={
-                              data.size[index] === data.cap ? true : false
-                            }
-                            value={(value, data)}
-                            onChange={() =>
-                              imgHandler(
-                                value,
-                                data.size[index],
-                                data.price[index]
-                              )
-                            }
-                          />
+                          {data.grossAmount ? (
+                            <>
+                              <input
+                                type="radio"
+                                name="color-name"
+                                id=""
+                                className={
+                                  data.size[index].includes("Blue")
+                                    ? " radio-bg-blue  "
+                                    : data.size[index].includes("White")
+                                    ? "radio-bg-white "
+                                    : data.size[index].includes("Black")
+                                    ? " radio-bg-black"
+                                    : data.size[index].includes("Mint")
+                                    ? " radio-bg-mint "
+                                    : data.size[index].includes("Pink")
+                                    ? " radio-bg-pink "
+                                    : " radio-bg-default"
+                                }
+                                checked={
+                                  data.size[index] === data.cap ? true : false
+                                }
+                                value={(value, data)}
+                                onChange={() =>
+                                  imgHandler(
+                                    value,
+                                    data.size[index],
+                                    data.price[index],
+                                    data.grossAmountOption[index]
+                                  )
+                                }
+                              />
+                            </>
+                          ) : (
+                            <input
+                              type="radio"
+                              name="color-name"
+                              id=""
+                              className={
+                                data.size[index].includes("Blue")
+                                  ? " radio-bg-blue  "
+                                  : data.size[index].includes("White")
+                                  ? "radio-bg-white "
+                                  : data.size[index].includes("Black")
+                                  ? " radio-bg-black"
+                                  : data.size[index].includes("Mint")
+                                  ? " radio-bg-mint "
+                                  : data.size[index].includes("Pink")
+                                  ? " radio-bg-pink "
+                                  : " radio-bg-default"
+                              }
+                              checked={
+                                data.size[index] === data.cap ? true : false
+                              }
+                              value={(value, data)}
+                              onChange={() =>
+                                imgHandler(
+                                  value,
+                                  data.size[index],
+                                  data.price[index]
+                                )
+                              }
+                            />
+                          )}
                         </div>
                       );
                     })}
@@ -132,7 +188,6 @@ const Cart = () => {
               </div>
             </>
           )}
-
           <br />
           <button
             className="btn-cart"
@@ -145,7 +200,7 @@ const Cart = () => {
                 rs: data.rs,
                 h5: data.h5,
                 totalQuantities: 1,
-                totalPrice:data.rs
+                totalPrice: data.rs,
               })
             }
           >

@@ -12,20 +12,34 @@ import Menu from "./Menu";
 import { IoCloseOutline } from "react-icons/io5";
 import Checkout from "../Checkout/Checkout";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 const Header = ({ user, logout }) => {
   // console.log(user);
   const [showMenu, setShowMenu] = useState(false);
   const [checkoutToggle, setCheckoutToggle] = useState(false);
-
+  const [stickyCheck, setStickyCheck] = useState(false);
+  const cartItems = useSelector((state) => state.cart.items);
+  const [scroll, setScroll] = useState(0);
   const toggleMenuHandler = () => {
     setShowMenu(!showMenu);
   };
   const checkoutToggleHandler = () => {
     setCheckoutToggle(!checkoutToggle);
   };
+
+  const headerChangeHandler = () => {
+    if (window.scrollY <= scroll) {
+      setStickyCheck(true);
+    } else {
+      setScroll(window.scrollY);
+      setStickyCheck(false);
+    }
+  };
+
+  window.addEventListener("scroll", headerChangeHandler);
   return (
     <>
-      <section>
+      <section className={stickyCheck ? "sticky-header" : ""}>
         <header className="header-container blue">
           <div className="header-wrapper">
             <div className="header-item">
@@ -44,7 +58,7 @@ const Header = ({ user, logout }) => {
               </div>
               <div className="header-links ">
                 <ul>
-                  <li className="menu-link">
+                  <li className="menu-link shop-all">
                     <span>Shop all</span>
                     <HoveredCard Props={menuData1} />
                   </li>
@@ -84,11 +98,14 @@ const Header = ({ user, logout }) => {
                     </Link>
                   </span>
                   <Link>
-                    <span>
+                    <span className=" checkout-btn-number">
                       <PiShoppingCart
                         className="icon"
                         onClick={checkoutToggleHandler}
                       />
+                      <span className="cart-item-number">
+                        {cartItems.length}
+                      </span>
                     </span>
                   </Link>
                   {user ? (

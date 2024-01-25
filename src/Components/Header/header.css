@@ -1,3 +1,10 @@
+.sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+}
+
 .header-container {
     width: 100%;
     background-color: #fff;
@@ -75,10 +82,10 @@
 }
 
 .login-icons {
-    align-items: end;
-    text-align: end;
-
+    text-align: right;
 }
+
+
 
 .login-icons>p>* {
     padding: 0rem 2rem;
@@ -86,6 +93,24 @@
     font-weight: 700;
     text-transform: uppercase;
 }
+
+.checkout-btn-number {
+    position: relative;
+}
+
+.cart-item-number {
+    position: absolute;
+    top: -15px;
+    margin: 0;
+    right: -10px;
+    background: #153a5b;
+    color: #f5f5f5;
+    padding: 0px 5px;
+    border-radius: 50%;
+    line-height: 20px;
+}
+
+
 
 @media screen and (max-width:1200px) {
     .header-container {
@@ -97,7 +122,10 @@
         display: block;
     }
 
-
+    .login-icons>p a {
+        display: inline !important;
+        text-align: right;
+    }
 
     .header-links {
         display: none;

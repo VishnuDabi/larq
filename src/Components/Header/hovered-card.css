@@ -4,13 +4,17 @@
     left: 0;
     width: 100%;
     padding: 0px 100px;
-    padding-right: 100px;
     background: #fff;
     height: 55vh;
     z-index: 2;
     display: none;
     gap: 20px 30px;
     color: #153a5b;
+
+}
+
+.shop-all .container-active .hovered-card-text {
+    color: #fff !important;
 
 }
 
