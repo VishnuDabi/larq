@@ -1,6 +1,6 @@
 .learn-card-container {
     position: relative;
-    height: 60%;
+    height: 70%;
     width: 100%;
     /* background-color: aqua; */
     /* margin: auto; */
@@ -52,4 +52,11 @@
 .learn-card-container:hover .shop-now-btn {
     transform: translateY(10px);
     transition: all 0.4s ease-in-out;
+}
+
+@media screen and (max-width:1200px) {
+    .learn-card {
+        width: 300px;
+        height: 455px;
+    }
 }

@@ -7,7 +7,6 @@ const Home = () => {
         <div className="home-txt">
           <span>Drink Brilliantly</span>
           <h1>Poppin’ bottles in 2024</h1>
-          <br />
           <p>
             Forget the bubbly, smart water purification is here to help crush
             those hydration goals.

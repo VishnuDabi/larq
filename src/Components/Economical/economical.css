@@ -1,11 +1,12 @@
 .economical-container {
-
-    margin: 100px;
+    margin: 5rem 10rem;
 }
 
 .eco-wrapper {
     display: flex;
-    background-image: linear-gradient(to right, #FCE9EB, rgb(255, 255, 255));
+    background: rgb(250, 235, 234);
+    background: linear-gradient(47deg, rgba(250, 235, 234, 1) 1%, rgba(255, 255, 255, 1) 100%, rgba(226, 213, 213, 0.25253851540616246) 100%);
+    /* background-image: linear-gradient(to right, #FCE9EB, rgb(255, 255, 255)); */
     padding: 0px 100px;
     border-radius: 25px;
 }
@@ -22,4 +23,37 @@
 
 .eco-card>p {
     font-weight: 400;
+}
+
+@media screen and (max-width:1200px) {
+    .economical-container {
+        margin: 5rem 4rem;
+    }
+
+    .eco-wrapper {
+
+        padding: 0 8rem;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .economical-container {
+        margin: 5rem 6rem;
+    }
+
+    .eco-wrapper {
+        flex-direction: column;
+        padding: 0 6rem;
+    }
+
+}
+
+@media screen and (max-width:441px) {
+    .economical-container {
+        margin: 5rem 4rem;
+    }
+
+    .eco-wrapper {
+        padding: 0 4rem;
+    }
 }

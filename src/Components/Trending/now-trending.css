@@ -1,5 +1,5 @@
 .trending-wrapper {
-    padding: 50px 100px
+    padding: 5rem 10rem
 }
 
 .trending-flex-container {
@@ -9,4 +9,26 @@
     overflow-x: scroll;
     padding-bottom: 40px;
 
+}
+
+@media screen and (max-width:1200px) {
+    .trending-wrapper {
+        padding: 5rem 8rem
+    }
+
+    .trending-flex-container {
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .trending-wrapper {
+        padding: 5rem 6rem
+    }
+}
+
+@media screen and (max-width:441px) {
+    .trending-wrapper {
+        padding: 5rem 4rem
+    }
 }

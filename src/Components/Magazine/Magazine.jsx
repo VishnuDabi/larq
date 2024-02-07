@@ -16,7 +16,7 @@ const Magazine = () => {
             </p>
           </div>
           <div className="explore-btn">
-            <button className="btn">
+            <button className="btn exl_btn">
               Explore basq <HiOutlineArrowNarrowRight className="arrow-right-icon" />
             </button>
           </div>

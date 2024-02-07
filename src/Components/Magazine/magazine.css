@@ -1,19 +1,23 @@
 .magazine-container {
-    padding-bottom: 100px;
+    padding-bottom: 10rem;
 }
 
 .magazine-wrapper {
     display: flex;
     padding: 5rem 10rem;
     justify-content: space-between;
-
+    align-items: center;
 }
 
 .magazine-text>p {
     font: 300 !important;
 }
 
-
+.exl_btn {
+    width: 180px;
+    background-color: transparent;
+    border: 1px solid var(--blue);
+}
 
 .magazine-scoll-container {
     display: flex;
@@ -44,4 +48,57 @@
             color-stop(0.72, rgb(73, 125, 189)),
             color-stop(0.86, rgb(28, 58, 148)));
     margin: 0px 100px;
+}
+
+@media screen and (max-width:1200px) {
+    .magazine-wrapper {
+        padding: 5rem 8rem;
+
+    }
+
+    .magazine-scoll-container {
+        padding: 5rem 8rem;
+    }
+
+    #style-4::-webkit-scrollbar-track {
+
+        margin: 0px 8rem;
+
+    }
+}
+
+@media screen and (max-width:768px) {
+    .magazine-wrapper {
+        padding: 5rem 6rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .magazine-scoll-container {
+        padding: 5rem 6rem;
+    }
+
+    #style-4::-webkit-scrollbar-track {
+
+        margin: 0px 6rem;
+
+    }
+}
+
+@media screen and (max-width:441px) {
+    .magazine-wrapper {
+        padding: 5rem 4rem;
+
+    }
+
+    .magazine-scoll-container {
+        padding: 5rem 4rem;
+    }
+
+    #style-4::-webkit-scrollbar-track {
+
+        margin: 0px 4rem;
+
+    }
 }

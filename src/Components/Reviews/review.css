@@ -53,9 +53,24 @@
 
 }
 
-@media screen and (max-width:443px) {
-    .all-review-btn {
-        display: none;
+
+@media screen and (max-width:1200px) {
+    .review-wrapper {
+        padding: 3rem 8rem;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+    .review-wrapper {
+        padding: 3rem 6rem;
+    }
+
+}
+
+@media screen and (max-width:441px) {
+    .review-wrapper {
+        padding: 3rem 4rem;
     }
 
 }

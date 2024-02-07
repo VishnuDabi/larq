@@ -137,3 +137,18 @@
     }
 
 }
+
+@media screen and (max-width:415px) {
+    .header-container {
+        padding: 0 15px;
+    }
+
+    .login-icons>p>* {
+        padding: 0rem 0.5rem;
+
+    }
+}
+@media screen and (max-width:315px) {
+    
+    
+}

@@ -1,6 +1,4 @@
 .trending-shop-card {
-
-    height: 600;
     width: 420px;
     border-radius: 20px;
     padding-bottom: 30px;
@@ -26,7 +24,6 @@
 }
 
 .option-img {
-
     height: 100px;
     width: 90px;
 }
@@ -70,4 +67,35 @@ span {
 
 .bg-default {
     background-color: #F6F6F6;
+}
+
+@media screen and (max-width:1200px) {
+    .trending-shop-card {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .trending-shop-card {
+        width: 260px;
+    }
+
+    .img__sm {
+        aspect-ratio: 3/4;
+    }
+
+    .shop-card-option {
+        overflow-x: scroll;
+        width: 95%
+    }
+}
+
+@media screen and (max-width:441px) {
+    .trending-shop-card {
+        /* width: 240px; */
+    }
+
+    .img__sm {
+        aspect-ratio: 3/4;
+    }
 }

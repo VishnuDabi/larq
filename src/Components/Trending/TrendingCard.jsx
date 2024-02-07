@@ -59,7 +59,7 @@ const TrendingCard = ({ Props, Index }) => {
               }}
             >
               <img
-                className={Props.cap.includes("34 oz") ? "img-scale" : "img"}
+                className={Props.cap.includes("34 oz") ? "img-scale" : "img img__sm"}
                 src={Props.src}
                 alt=""
               />
