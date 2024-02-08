@@ -1,5 +1,10 @@
 import React from "react";
 import "./footer.css";
+import { FaFacebook } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa6";
+
 const Footer = () => {
   return (
     <footer className="footer-container">
@@ -17,17 +22,34 @@ const Footer = () => {
             placeholder=" Email Address"
           />
           <br />
-          <br />
-          <span className="icons">
-            <i>icons</i>
-            <i>icons</i>
-            <i>icons</i>
-            <i>icons</i>
+          <p className="icons">
+            <i>
+              <FaFacebook className="icon" />
+            </i>
+            <i>
+              <FaInstagram className="icon" />
+            </i>
+            <i>
+              <FaYoutube className="icon" />
+            </i>
+            <i>
+              <FaTwitter className="icon" />
+            </i>
             <br />
-          </span>
+          </p>
           <br />
           <div className="footer-btn">
-            <button className="btn">United States</button>
+            <button className="btn">
+              {" "}
+              <div className="d__flex">
+                <img
+                  className="flag-img"
+                  src="https://res.cloudinary.com/larq/image/upload/v1702649207/v3-images/flags/us.svg"
+                  alt=""
+                />
+                <span>United States</span>
+              </div>
+            </button>
             <button className="btn">Terms & Privacy</button>
             <button className="btn">Accessibility</button>
           </div>
@@ -52,7 +74,7 @@ const Footer = () => {
         </div>
         <div className=" footer-img">
           <img
-            className="img"
+            className="cy-img"
             src="https://res.cloudinary.com/larq/image/upload/e_replace_color:f5f9fc:100:white/v1682247434/v3-images/footer/bicycle-animation.gif"
             alt=""
           />

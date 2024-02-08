@@ -125,6 +125,11 @@
 }
 
 @media screen and (max-width:1200px) {
+    .mission-container {
+        background-size: cover;
+        background-position: 20% 30%;
+    }
+
     .mission-container-text {
         bottom: 5%;
         left: 5%;

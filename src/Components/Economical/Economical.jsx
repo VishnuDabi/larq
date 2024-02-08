@@ -1,5 +1,6 @@
 import React from "react";
 import "./economical.css";
+import { BsDroplet } from "react-icons/bs";
 const Economical = () => {
   return (
     <section className="economical-container">
@@ -11,6 +12,9 @@ const Economical = () => {
           </p>
         </div>
         <div className="eco-card">
+          <i>
+            <BsDroplet className="icon eco-icon" />
+          </i>
           <h3>A smart way to sip</h3>
           <p>
             PureVis™ and Nano Zero technology improves water quality for a
