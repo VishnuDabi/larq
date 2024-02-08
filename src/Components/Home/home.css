@@ -1,5 +1,5 @@
 .home-wrapper {
-    background-image: url('https:res.cloudinary.com/larq/image/fetch/q_auto,f_auto/https://res.cloudinary.com/larq/images/f_auto,q_auto/v1703675638/NewYear_Website_Hero_2400x1200/NewYear_Website_Hero_2400x1200.jpg?_i=AA');
+    background-image: url('https://res.cloudinary.com/larq/image/fetch/q_auto,f_auto/https://res.cloudinary.com/larq/images/f_auto,q_auto/v1706608751/DPM_1-114_2400x1200/DPM_1-114_2400x1200.jpg?_i=AA');
     height: calc(100vh - 100px);
     width: 100%;
     background-size: cover;
@@ -71,6 +71,10 @@
 }
 
 @media screen and (max-width:768px) {
+    .home-wrapper {
+        background-image: url("https:res.cloudinary.com/larq/image/fetch/q_auto,f_auto/https://res.cloudinary.com/larq/images/f_auto,q_auto/v1706608756/DPM_1-114_1200x2400/DPM_1-114_1200x2400.jpg?_i=AA");
+    }
+
     .home-txt {
         width: 35%;
         line-height: normal;

@@ -6,10 +6,10 @@ const Home = () => {
       <div className="home-wrapper">
         <div className="home-txt">
           <span>Drink Brilliantly</span>
-          <h1>Poppin’ bottles in 2024</h1>
+          <h1>Bet your bottle can’t do this</h1>
           <p>
-            Forget the bubbly, smart water purification is here to help crush
-            those hydration goals.
+            Discover the science of PureVis™ technology for a germ-free and
+            stink-free bottle.
           </p>
           <button className="btn">Shop Now</button>
         </div>
