@@ -217,4 +217,7 @@
     .footer-wrapper {
         padding-left: 4rem;
     }
+        .footer-img {
+        display: none;
+    }
 }
