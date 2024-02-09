@@ -1,5 +1,6 @@
 import React from "react";
 import "./home.css";
+
 const Home = () => {
   return (
     <section className="home-container">
@@ -16,9 +17,10 @@ const Home = () => {
         <div className="mini-image-container">
           <div className="mini-img">
             <img
-              className=""
-              src="https://res.cloudinary.com/larq/image/upload/q_auto,f_auto/w_900/v1701177839/SKU/SPA/v3/BDOB074A.png"
-              alt=""
+              className="img"
+              src="/images/mini.webp"
+              alt="
+            bottle"
             />
             <p> LARQ Bottle PureVis™</p>
           </div>

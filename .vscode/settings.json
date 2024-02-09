@@ -9,5 +9,8 @@
         "scminput": true,
         "git-commit": true
     },
-    "html.format.contentUnformatted": ""
+    "html.format.contentUnformatted": "",
+    "cSpell.words": [
+        "webp"
+    ]
 }
