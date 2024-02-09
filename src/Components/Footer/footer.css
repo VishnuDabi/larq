@@ -211,13 +211,17 @@
     .footer-card {
         padding-bottom: 0;
     }
+
+    .cy-img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
 }
 
 @media screen and (max-width:441px) {
     .footer-wrapper {
         padding-left: 4rem;
     }
-        .footer-img {
-        display: none;
-    }
+
 }
