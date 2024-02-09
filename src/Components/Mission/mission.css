@@ -84,6 +84,14 @@
     display: flex;
 }
 
+.btn-next-prev {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    z-index: 10;
+
+}
+
 .learn-more-container:hover {
     transform: translateX(14%);
 
@@ -149,9 +157,23 @@
     .active-back-btn {
         bottom: 5%;
         left: 5%;
+
     }
 
 
+}
+
+@media screen and (max-width:1024px) {
+    .active-learn-more-container {
+        z-index: 2;
+        transform: translateX(60%);
+        height: 100%;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        transition: all 0.6s ease-in-out;
+        display: flex;
+    }
 }
 
 @media screen and (max-width:778px) {

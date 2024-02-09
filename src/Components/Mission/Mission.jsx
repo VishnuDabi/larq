@@ -49,6 +49,14 @@ const Mission = () => {
             })}
           </div>
         </div>
+        {/* <div className="btn-next-prev">
+          <button className="btn" onClick={() => translate("Prev")}>
+            +efewfwf
+          </button>
+          <button className="btn" onClick={() => translate("Next")}>
+            -
+          </button>
+        </div> */}
       </div>
     </section>
   );

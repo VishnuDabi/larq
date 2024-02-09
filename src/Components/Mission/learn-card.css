@@ -1,6 +1,6 @@
 .learn-card-container {
     position: relative;
-    height: 70%;
+    height: 35%;
     width: 100%;
     /* background-color: aqua; */
     /* margin: auto; */
@@ -20,6 +20,18 @@
     cursor: pointer;
 }
 
+.learn-card::after {
+
+    content: '';
+    position: absolute;
+    top: 0px;
+    border-radius: 15px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(21, 58, 91, 0) 0%, rgba(21, 58, 91, 0) 33.33%, rgba(21, 58, 91, 0.1) 66.67%, rgba(21, 58, 91, 0.8) 100%);
+}
+
 .img-cr {
     height: 100%;
     width: 100%;
@@ -27,6 +39,7 @@
 }
 
 .learn-card-text {
+    z-index: 1;
     position: absolute;
     bottom: 0;
     left: 10%;
@@ -54,9 +67,19 @@
     transition: all 0.4s ease-in-out;
 }
 
+
 @media screen and (max-width:1200px) {
     .learn-card {
-        width: 300px;
+        width: 350px;
+        height: 500px;
+    }
+}
+
+
+
+@media screen and (max-width:441px) {
+    .learn-card {
+        width: 250px;
         height: 455px;
     }
 }
