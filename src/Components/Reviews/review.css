@@ -3,7 +3,7 @@
     gap: 10px;
     /* height: 300px; */
     flex-direction: row;
-    padding: 30px 100px;
+    padding: 3rem 10rem;
 }
 
 .review-title-container {
@@ -56,21 +56,21 @@
 
 @media screen and (max-width:1200px) {
     .review-wrapper {
-        padding: 3rem 8rem;
+        padding: 3rem 6rem;
     }
 
 }
 
 @media screen and (max-width:768px) {
     .review-wrapper {
-        padding: 3rem 6rem;
+        padding: 3rem 4rem;
     }
 
 }
 
 @media screen and (max-width:441px) {
     .review-wrapper {
-        padding: 3rem 4rem;
+        padding: 3rem 2rem;
     }
 
 }

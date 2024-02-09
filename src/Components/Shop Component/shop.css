@@ -1,5 +1,5 @@
 .shop-conatiner {
-    padding: 2rem 10rem;
+    padding: 2rem 8rem;
 }
 
 
@@ -17,7 +17,7 @@
 
 @media screen and (max-width:1200px) {
     .shop-conatiner {
-        padding: 2rem 8rem;
+        padding: 2rem 6rem;
     }
 }
 
@@ -30,12 +30,12 @@
 
 @media screen and (max-width:768px) {
     .shop-conatiner {
-        padding: 2rem 6rem;
+        padding: 2rem 4rem;
     }
 }
 
 @media screen and (max-width:441px) {
     .shop-conatiner {
-        padding: 2rem 4rem;
+        padding: 2rem 2rem;
     }
 }

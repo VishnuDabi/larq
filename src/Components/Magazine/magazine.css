@@ -1,10 +1,10 @@
 .magazine-container {
-    padding-bottom: 10rem;
+    padding-bottom: 8rem;
 }
 
 .magazine-wrapper {
     display: flex;
-    padding: 5rem 10rem;
+    padding: 5rem 8rem;
     justify-content: space-between;
     align-items: center;
 }
@@ -21,22 +21,22 @@
 
 .magazine-scoll-container {
     display: flex;
-    padding: 0rem 10rem;
+    padding: 0rem 8rem;
     overflow-x: scroll;
-    height: 635px;
+    /* height: 635px; */
 
 }
 
 #style-4::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
-    margin: 0px 100px;
+    margin: 0px 8rem;
 
 }
 
 #style-4::-webkit-scrollbar {
     height: 5px;
-    margin: 0px 100px;
+    margin: 0px 8rem;
 }
 
 #style-4::-webkit-scrollbar-thumb {
@@ -47,32 +47,13 @@
             color-stop(0.44, rgb(122, 153, 217)),
             color-stop(0.72, rgb(73, 125, 189)),
             color-stop(0.86, rgb(28, 58, 148)));
-    margin: 0px 100px;
+    margin: 0px 8rem;
 }
 
 @media screen and (max-width:1200px) {
     .magazine-wrapper {
-        padding: 5rem 8rem;
-
-    }
-
-    .magazine-scoll-container {
-        padding: 5rem 8rem;
-    }
-
-    #style-4::-webkit-scrollbar-track {
-
-        margin: 0px 8rem;
-
-    }
-}
-
-@media screen and (max-width:768px) {
-    .magazine-wrapper {
         padding: 5rem 6rem;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
+
     }
 
     .magazine-scoll-container {
@@ -86,10 +67,12 @@
     }
 }
 
-@media screen and (max-width:441px) {
+@media screen and (max-width:768px) {
     .magazine-wrapper {
         padding: 5rem 4rem;
-
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
     }
 
     .magazine-scoll-container {
@@ -99,6 +82,23 @@
     #style-4::-webkit-scrollbar-track {
 
         margin: 0px 4rem;
+
+    }
+}
+
+@media screen and (max-width:441px) {
+    .magazine-wrapper {
+        padding: 5rem 2rem;
+
+    }
+
+    .magazine-scoll-container {
+        padding: 5rem 2rem;
+    }
+
+    #style-4::-webkit-scrollbar-track {
+
+        margin: 0px 2rem;
 
     }
 }

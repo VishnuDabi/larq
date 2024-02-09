@@ -1,5 +1,5 @@
 .economical-container {
-    margin: 5rem 10rem;
+    margin: 5rem 8rem;
 }
 
 .eco-wrapper {
@@ -7,7 +7,7 @@
     background: rgb(250, 235, 234);
     background: linear-gradient(47deg, rgba(250, 235, 234, 1) 1%, rgba(255, 255, 255, 1) 100%, rgba(226, 213, 213, 0.25253851540616246) 100%);
     /* background-image: linear-gradient(to right, #FCE9EB, rgb(255, 255, 255)); */
-    padding: 0px 100px;
+    padding: 0px 8rem;
     border-radius: 25px;
 }
 
@@ -37,28 +37,28 @@
 
     .eco-wrapper {
 
-        padding: 0 8rem;
+        padding: 0 4rem;
     }
 }
 
 @media screen and (max-width:768px) {
     .economical-container {
-        margin: 5rem 6rem;
+        margin: 5rem 4rem;
     }
 
     .eco-wrapper {
         flex-direction: column;
-        padding: 0 6rem;
+        padding: 0 4rem;
     }
 
 }
 
 @media screen and (max-width:441px) {
     .economical-container {
-        margin: 5rem 4rem;
+        margin: 5rem 2rem;
     }
 
     .eco-wrapper {
-        padding: 0 4rem;
+        padding: 0 2rem;
     }
 }

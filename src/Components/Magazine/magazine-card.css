@@ -1,6 +1,7 @@
 .mg-card {
     height: 100%;
     width: 400px;
+
     padding: 0px 3rem 0rem 0rem;
     cursor: pointer;
     display: flex;
@@ -34,4 +35,15 @@
     border: none;
     text-decoration: underline;
     background: none;
+}
+
+@media screen and (max-width:441px) {
+    .mg-card {
+        height: 100%;
+        width: 280px;
+        padding: 0px 3rem 0rem 0rem;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+    }
 }

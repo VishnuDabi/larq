@@ -212,11 +212,19 @@ a {
 }
 
 @media screen and (max-width:1200px) {
-  .shop-conatiner {
-    padding: 2rem 8rem;
+  h3 {
+    font-size: 3.2rem;
   }
 }
 
-@media screen and (max-width:768px) {}
+@media screen and (max-width:768px) {
+  h3 {
+    font-size: 2.6rem;
+  }
+}
 
-@media screen and (max-width:441px) {}
+@media screen and (max-width:441px) {
+  h3 {
+    font-size: 2.4rem;
+  }
+}

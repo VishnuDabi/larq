@@ -17,7 +17,7 @@
     text-align: center;
     margin: auto;
     height: 120px;
-    width: 90%;
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,6 +27,15 @@
     height: 100px;
     width: 90px;
 }
+
+.tr-mini-img {
+    height: 100%;
+    width: 75px;
+
+    object-fit: cover;
+}
+
+
 
 .shop-card-txt p,
 span {
@@ -73,11 +82,18 @@ span {
     .trending-shop-card {
         width: 350px;
     }
+
+    .tr-mini-img {
+        height: 85%;
+        width: 65px;
+
+        object-fit: cover;
+    }
 }
 
 @media screen and (max-width:768px) {
     .trending-shop-card {
-        width: 260px;
+        width: 340px;
     }
 
     .img__sm {
@@ -85,17 +101,34 @@ span {
     }
 
     .shop-card-option {
-        overflow-x: scroll;
-        width: 95%
+
+        width: 95%;
+        height: 150px;
     }
+
 }
 
 @media screen and (max-width:441px) {
     .trending-shop-card {
-        /* width: 240px; */
+        width: 280px;
     }
 
     .img__sm {
         aspect-ratio: 3/4;
     }
+
+    .tr-mini-img {
+        height: 70%;
+        width: 50px;
+        object-fit: cover;
+    }
+
+    .shop-card-option {
+        /* overflow-x: hidden; */
+        width: 95%;
+        height: 120px;
+    }
+
+
+
 }

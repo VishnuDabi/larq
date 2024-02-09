@@ -1,5 +1,5 @@
 .trending-wrapper {
-    padding: 5rem 10rem
+    padding: 5rem 8rem
 }
 
 .trending-flex-container {
@@ -13,7 +13,7 @@
 
 @media screen and (max-width:1200px) {
     .trending-wrapper {
-        padding: 5rem 8rem
+        padding: 5rem 6rem
     }
 
     .trending-flex-container {
@@ -23,12 +23,12 @@
 
 @media screen and (max-width:768px) {
     .trending-wrapper {
-        padding: 5rem 6rem
+        padding: 5rem 4rem
     }
 }
 
 @media screen and (max-width:441px) {
     .trending-wrapper {
-        padding: 5rem 4rem
+        padding: 5rem 2rem
     }
 }

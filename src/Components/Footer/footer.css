@@ -5,7 +5,7 @@
 
 .footer-wrapper {
     /* margin: 2rem 10rem 2rem; */
-    padding: 2rem 0rem 2rem 10rem;
+    padding: 2rem 0rem 2rem 8rem;
     display: flex;
 
 }
@@ -136,7 +136,7 @@
 
 @media screen and (max-width:1420px) {
     .footer-wrapper {
-        padding-left: 8rem;
+        padding-left: 6rem;
     }
 
     .footer-img {
@@ -173,7 +173,7 @@
 
 @media screen and (max-width:776px) {
     .footer-wrapper {
-        padding: 0 6rem;
+        padding: 0 4rem;
         flex-direction: column;
     }
 
@@ -221,7 +221,7 @@
 
 @media screen and (max-width:441px) {
     .footer-wrapper {
-        padding-left: 4rem;
+        padding-left: 2rem;
     }
 
 }

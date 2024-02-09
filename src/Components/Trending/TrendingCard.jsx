@@ -59,7 +59,11 @@ const TrendingCard = ({ Props, Index }) => {
               }}
             >
               <img
-                className={Props.cap.includes("34 oz") ? "img-scale" : "img img__sm"}
+                className={
+                  Props.cap.includes("34 oz")
+                    ? "img-scale img__sm"
+                    : "img img__sm"
+                }
                 src={Props.src}
                 alt=""
               />
@@ -88,7 +92,7 @@ const TrendingCard = ({ Props, Index }) => {
                           ? { border: "1px solid black" }
                           : { border: "none" }
                       }
-                      className="img border-10"
+                      className="tr-mini-img border-10"
                       src={v}
                       alt=""
                       onClick={() => imageChangeHandler(v, i)}
