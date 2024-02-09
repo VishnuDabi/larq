@@ -18,7 +18,7 @@ const Home = () => {
           <div className="mini-img">
             <img
               className="img"
-              src="/images/mini.webp"
+              src="https://res.cloudinary.com/larq/image/upload/q_auto,f_auto/w_900/v1701177839/SKU/SPA/v3/BDGW050A.png"
               alt="
             bottle"
             />
