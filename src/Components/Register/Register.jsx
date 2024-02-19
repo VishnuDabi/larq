@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./register.css";
-const Register = ({ logout, register, user }) => {
+const Register = ({ logout, register }) => {
   const [data, setData] = useState({
     name: "",
     email: "",

@@ -12,14 +12,21 @@ import Menu from "./Menu";
 import { IoCloseOutline } from "react-icons/io5";
 import Checkout from "../Checkout/Checkout";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
-const Header = ({ user, logout }) => {
+import { useDispatch, useSelector } from "react-redux";
+import { setLogout } from "../../Redux/features/counter/cartSlice";
+
+const Header = ({ logout }) => {
   // console.log(user);
   const [showMenu, setShowMenu] = useState(false);
   const [checkoutToggle, setCheckoutToggle] = useState(false);
   const [stickyCheck, setStickyCheck] = useState(false);
   const cartItems = useSelector((state) => state.cart.items);
+  const user = useSelector((state) => state.cart.user);
+  const userId = useSelector((state) => state.cart.userId);
+  console.log(userId);
   const [scroll, setScroll] = useState(0);
+  const dispatch = useDispatch();
+
   const toggleMenuHandler = () => {
     setShowMenu(!showMenu);
   };
@@ -109,7 +116,12 @@ const Header = ({ user, logout }) => {
                     </span>
                   </Link>
                   {user ? (
-                    <button className="" onClick={logout}>
+                    <button
+                      className="btn logout-btn"
+                      onClick={() => {
+                        dispatch(setLogout());
+                      }}
+                    >
                       Logout
                     </button>
                   ) : null}

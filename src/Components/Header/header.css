@@ -110,6 +110,10 @@
     line-height: 20px;
 }
 
+.logout-btn {
+    padding: 10px 2rem !important;
+}
+
 
 
 @media screen and (max-width:1200px) {

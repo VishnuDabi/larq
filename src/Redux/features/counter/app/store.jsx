@@ -1,17 +1,16 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { persistStore, persistReducer } from "redux-persist";
+// import { id } from "../cartSlice";
 import storage from "redux-persist/lib/storage"; // defaults to localStorage for web
-import cartReducer from "../../Redux/features/counter/cartSlice";
-// import authReducer from "../../Redux/features/counter/authSlice";
+import cartReducer from "../cartSlice";
+import { account } from "../../../../lib/appwite";
+let id = await account.get();
+// console.log();
 const persistConfig = {
-  key: "root",
+  key: `root ${id.$id} `,
   storage,
 };
-const persistedReducer = persistReducer(
-  persistConfig,
-  cartReducer
-  // authReducer
-);
+const persistedReducer = persistReducer(persistConfig, cartReducer);
 
 export const store = configureStore({
   reducer: {

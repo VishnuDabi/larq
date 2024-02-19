@@ -1,4 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { account } from "../../../lib/appwite";
+import { createRef, useState } from "react";
 
 const calculateTotal = (state) => {
   state.totalAmount = 0;
@@ -10,8 +12,10 @@ const calculateTotal = (state) => {
 const initialState = {
   items: [],
   totalAmount: 0,
+  user: "null",
+  userId: "null",
 };
-
+let id = createRef(null);
 export const cartSlice = createSlice({
   name: "cart",
   initialState,
@@ -54,8 +58,25 @@ export const cartSlice = createSlice({
       });
       calculateTotal(state);
     },
+    setUser: (state, action) => {
+      console.log(action.payload.$id);
+      state.user = action.payload.name;
+      state.userId = action.payload.$id;
+      id.current = action.payload.$id;
+    },
+    setLogout: (state) => {
+      state.user = null;
+      id.current = null;
+    },
   },
 });
-export const { addItem, removeItem, increaseQuantity, decreaseQuantity } =
-  cartSlice.actions;
+export { id };
+export const {
+  addItem,
+  removeItem,
+  increaseQuantity,
+  decreaseQuantity,
+  setUser,
+  setLogout,
+} = cartSlice.actions;
 export default cartSlice.reducer;

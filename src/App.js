@@ -15,17 +15,22 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 // import Main from "./Redux/Main";
 import { useState } from "react";
 import { ID, account } from "./lib/appwite";
+import { useDispatch } from "react-redux";
+import { setUser } from "./Redux/features/counter/cartSlice";
 function App() {
-  const [loggedInUser, setLoggedInUser] = useState(null);
+  // const [loggedInUser, setLoggedInUser] = useState(null);
   // const [loggedInUser, setLoggedInUser] = useState(
   //   localStorage.getItem("cookieFallback") || null
   // );
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   async function loginHandler(email, password) {
     try {
       if (email && password) {
         await account.createEmailSession(email, password);
-        setLoggedInUser(await account.get());
+        let user = await account.get();
+        // setLoggedInUser(user);
+        dispatch(setUser(user));
         navigate("/");
       }
     } catch (error) {
@@ -46,7 +51,7 @@ function App() {
   async function logoutHandler() {
     try {
       await account.deleteSession("current");
-      setLoggedInUser(null);
+      // setLoggedInUser(null);
     } catch (error) {
       alert(error);
     }
@@ -55,7 +60,7 @@ function App() {
   return (
     <div>
       {/* <Main /> */}
-      <Header user={loggedInUser} logout={logoutHandler} />
+      <Header logout={logoutHandler} />
       <Routes>
         <Route
           path="/"
@@ -75,11 +80,7 @@ function App() {
         <Route
           path="/registration"
           element={
-            <Register
-              logout={logoutHandler}
-              register={registerHandler}
-              user={loggedInUser}
-            />
+            <Register logout={logoutHandler} register={registerHandler} />
           }
         />
         <Route path="/bottle/:targetIndex" element={<Cart />} />
