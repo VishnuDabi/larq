@@ -16,14 +16,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { setLogout } from "../../Redux/features/counter/cartSlice";
 
 const Header = ({ logout }) => {
-  // console.log(user);
   const [showMenu, setShowMenu] = useState(false);
   const [checkoutToggle, setCheckoutToggle] = useState(false);
   const [stickyCheck, setStickyCheck] = useState(false);
   const cartItems = useSelector((state) => state.cart.items);
   const user = useSelector((state) => state.cart.user);
   const userId = useSelector((state) => state.cart.userId);
-  // console.log(userId);
+  console.log(user);
+
   const [scroll, setScroll] = useState(0);
   const dispatch = useDispatch();
 
@@ -115,7 +115,7 @@ const Header = ({ logout }) => {
                       </span>
                     </span>
                   </Link>
-                  {user ? (
+                  {user !== null ? (
                     <button
                       className="btn logout-btn"
                       onClick={() => {
