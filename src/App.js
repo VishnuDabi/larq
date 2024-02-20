@@ -57,10 +57,12 @@ function App() {
     }
   }
 
+
   return (
     <div>
       {/* <Main /> */}
       <Header logout={logoutHandler} />
+
       <Routes>
         <Route
           path="/"

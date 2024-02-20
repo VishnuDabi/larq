@@ -23,7 +23,7 @@ const Header = ({ logout }) => {
   const cartItems = useSelector((state) => state.cart.items);
   const user = useSelector((state) => state.cart.user);
   const userId = useSelector((state) => state.cart.userId);
-  console.log(userId);
+  // console.log(userId);
   const [scroll, setScroll] = useState(0);
   const dispatch = useDispatch();
 

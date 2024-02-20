@@ -131,6 +131,8 @@ const Cart = () => {
                                     ? " radio-bg-mint "
                                     : data.size[index].includes("Pink")
                                     ? " radio-bg-pink "
+                                    : data.size[index].includes("Green")
+                                    ? " radio-bg-green "
                                     : " radio-bg-default"
                                 }
                                 checked={
@@ -163,6 +165,8 @@ const Cart = () => {
                                   ? " radio-bg-mint "
                                   : data.size[index].includes("Pink")
                                   ? " radio-bg-pink "
+                                  : data.size[index].includes("Green")
+                                  ? " radio-bg-green "
                                   : " radio-bg-default"
                               }
                               checked={

@@ -113,10 +113,7 @@ input[type="radio"]::before {
 
 }
 
-.radio-bg-green::before {
-    background-color: rgb(113, 187, 166);
 
-}
 
 .radio-bg-black::before {
     background-color: rgb(33, 32, 32);
@@ -138,11 +135,16 @@ input[type="radio"]::before {
 
 }
 
+
 .radio-bg-default::before {
     background-color: #f0f0f0;
 
 }
 
+.radio-bg-green::before {
+    background-color: rgb(113, 187, 166);
+
+}
 
 
 input[type="radio"]:checked:before {

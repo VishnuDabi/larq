@@ -34,7 +34,7 @@
 }
 
 .header-item {
-    flex: 1 2 0px;
+    /* flex: 1 2 0px; */
 
 }
 
@@ -73,7 +73,7 @@
 /* header icons container */
 
 .icons-container {
-    flex: 1 0 0px;
+    /* flex: 1 0 0px; */
 
 }
 

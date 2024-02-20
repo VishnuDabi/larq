@@ -15,7 +15,7 @@ const initialState = {
   user: "null",
   userId: "null",
 };
-let id = createRef(null);
+
 export const cartSlice = createSlice({
   name: "cart",
   initialState,
@@ -62,15 +62,13 @@ export const cartSlice = createSlice({
       console.log(action.payload.$id);
       state.user = action.payload.name;
       state.userId = action.payload.$id;
-      id.current = action.payload.$id;
     },
     setLogout: (state) => {
       state.user = null;
-      id.current = null;
     },
   },
 });
-export { id };
+
 export const {
   addItem,
   removeItem,
