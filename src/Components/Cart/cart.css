@@ -214,3 +214,16 @@ hr {
     line-height: 25px;
     text-align: start;
 }
+
+@media screen and (max-width:993px) {
+    .cart-wrapper {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .cart-item {
+        flex: 1 1 0;
+    }
+
+}
