@@ -12,8 +12,8 @@ const calculateTotal = (state) => {
 const initialState = {
   items: [],
   totalAmount: 0,
-  user: "null",
-  userId: "null",
+  user: null,
+  userId: null,
 };
 
 export const cartSlice = createSlice({

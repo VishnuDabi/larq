@@ -22,7 +22,7 @@ const Header = ({ logout }) => {
   const cartItems = useSelector((state) => state.cart.items);
   const user = useSelector((state) => state.cart.user);
   const userId = useSelector((state) => state.cart.userId);
-  // console.log(user);
+  console.log(user);
 
   const [scroll, setScroll] = useState(0);
   const dispatch = useDispatch();
@@ -100,9 +100,20 @@ const Header = ({ logout }) => {
                   <span>technology</span>
                   <span>faq</span>
                   <span>
-                    <Link to="sign-in">
-                      <CiUser className="icon" />
-                    </Link>
+                    {user != null ? (
+                      <button
+                        className="btn logout-btn"
+                        onClick={() => {
+                          dispatch(setLogout());
+                        }}
+                      >
+                        Logout
+                      </button>
+                    ) : (
+                      <Link to="sign-in">
+                        <CiUser className="icon" />
+                      </Link>
+                    )}
                   </span>
                   <Link>
                     <span className=" checkout-btn-number">
@@ -115,16 +126,6 @@ const Header = ({ logout }) => {
                       </span>
                     </span>
                   </Link>
-                  {user !== null ? (
-                    <button
-                      className="btn logout-btn"
-                      onClick={() => {
-                        dispatch(setLogout());
-                      }}
-                    >
-                      Logout
-                    </button>
-                  ) : null}
                 </p>
               </div>
             </div>
