@@ -19,7 +19,7 @@ const Checkout = ({ props, fun }) => {
 
   // console.log(cartItems);
   const handleDeleteProduct = (item) => {
-    console.log(item);
+    // console.log(item);
     dispatch(removeItem(item));
   };
   const handleIncreaseQuantity = (item) => {
@@ -141,15 +141,17 @@ const Checkout = ({ props, fun }) => {
             </span>
             <br />
             <br />
-            <button
-              className={hovered ? " btn-cart" : "btn-cart-hovered"}
-              onMouseEnter={() => setHovered(true)}
-              onMouseLeave={() => {
-                setHovered(false);
-              }}
-            >
-              Check out Now
-            </button>
+            <Link to="/checkout" onClick={fun}>
+              <button
+                className={hovered ? " btn-cart" : "btn-cart-hovered"}
+                onMouseEnter={() => setHovered(true)}
+                onMouseLeave={() => {
+                  setHovered(false);
+                }}
+              >
+                Check out Now
+              </button>
+            </Link>
             <p>Shipping and taxes calculated at checkout.</p>
           </div>
         )}

@@ -22,10 +22,12 @@ const Header = ({ logout }) => {
   const cartItems = useSelector((state) => state.cart.items);
   const user = useSelector((state) => state.cart.user);
   const userId = useSelector((state) => state.cart.userId);
-  console.log(user);
+  // console.log(user);
 
   const [scroll, setScroll] = useState(0);
   const dispatch = useDispatch();
+
+  localStorage.setItem(user, "user");
 
   const toggleMenuHandler = () => {
     setShowMenu(!showMenu);
@@ -110,7 +112,7 @@ const Header = ({ logout }) => {
                         Logout
                       </button>
                     ) : (
-                      <Link to="sign-in">
+                      <Link to="/login">
                         <CiUser className="icon" />
                       </Link>
                     )}

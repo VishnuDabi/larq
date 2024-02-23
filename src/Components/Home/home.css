@@ -53,7 +53,7 @@
 
 }
 
-.home-container::after {
+.home-wrapper::after {
     content: '';
     position: absolute;
     top: 0;

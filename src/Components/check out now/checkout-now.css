@@ -1,0 +1,101 @@
+.checkout_now_container {
+    width: 100%;
+    padding: 40px 100px;
+
+}
+
+.check__main {
+    width: min(1200px, 100%);
+    display: flex;
+    margin: auto;
+}
+
+.chek__main__child1 {
+    flex-grow: 6;
+    flex-shrink: 1;
+    padding: 10px 100px 10px 20px;
+
+
+}
+
+.sm__text {
+    font-size: 14px !important;
+}
+
+.chek__main__child2 {
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: 15px;
+    background-color: #f6f6f6;
+}
+
+.check__mini__flex {
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    margin: 10px 0;
+    font-size: 13px !important;
+}
+
+.tx-13 {
+    font-weight: 300;
+    font-size: 13px !important;
+}
+
+.fw-700 {
+    font-weight: 700 !important;
+}
+
+.d__flex__space__between {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.co__price>p {
+
+    font-weight: 300;
+    font-size: 13px !important;
+}
+
+@media screen and (max-width:993px) {
+
+    .checkout_now_container {
+        padding: 40px 80px;
+
+    }
+
+    .check__main {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .chek__main__child1 {
+        padding: 0px;
+    }
+}
+
+@media screen and (max-width:778px) {
+
+    .checkout_now_container {
+
+        padding: 30px 40px;
+    }
+
+    .chek__main__child1 {
+        padding: 0px;
+    }
+}
+
+@media screen and (max-width:441px) {
+
+    .checkout_now_container {
+
+        padding: 30px 20px;
+    }
+
+    .chek__main__child1 {
+        padding: 0px;
+    }
+}
