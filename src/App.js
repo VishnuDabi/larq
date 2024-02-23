@@ -52,10 +52,6 @@ function App() {
   async function logoutHandler() {
     try {
       await account.deleteSession("current");
-      let id = await account.get();
-      id = id.$id;
-      let res = await account.deleteIdentity(id);
-      console.log(res);
     } catch (error) {
       alert(error);
     }

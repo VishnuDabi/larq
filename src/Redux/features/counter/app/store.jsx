@@ -6,8 +6,8 @@ import { account } from "../../../../lib/appwite";
 let id = await account.get();
 console.log(id);
 const persistConfig = {
-  key: `root ${id.$id} `,
-  // key: `root `,
+  // key: `root ${id.$id} `,
+  key: `root `,
   storage,
 };
 const persistedReducer = persistReducer(persistConfig, cartReducer);
